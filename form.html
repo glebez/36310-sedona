@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: sedona</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body>
+
+  <nav>
+  	<div class="menu-close">
+  		<span></span>
+  		<span></span>
+  	</div>
+  	<ul>
+  		<li><a href="">Карта Штата</a></li>
+  		<li><a href="">Информация</a></li>
+  		<li><a href="">Фото и видео</a></li>
+  		<li><a href="">Гостиницы</a></li>
+  	</ul>
+  </nav>
+
+
+  <header>
+  	<div class="logo"><a href="#"></a></div>
+  	<div class="menu-burger">
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  	</div>
+  </header>
+
+
+  <div class="jumbo jumbo-folded">
+  	<h1 class="h1-small">Sedona</h1>
+  </div>
+  <div class="block-white">
+    <header>
+      <h2 class="h2">Оставьте свой отзыв</h2>
+      <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    </header>
+    <form action="">
+      <div>
+        <h2 class="h2">Представьтесь, пожалуйста:</h2>
+        <label for="">Фамилия: <span>*</span></label>
+        <input type="text" value="Иванов" required>
+        <label for="">Имя: <span>*</span></label>
+        <input type="text" value="Петр" required>
+        <label for="">Отчество: <span>*</span></label>
+        <input type="text" value="Александрович">
+      </div>
+      <div>
+        <h2 class="h2">Ваше общее впечатление:</h2>
+        <input type="radio" name="impression" id="imp1">
+        <label for="imp1">Скорее положительное</label>
+        <input type="radio" name="impression" id="imp2">
+        <label for="imp2">Скорее отрицательное</label>
+      </div>
+      <div class="tour-dates">
+        <h2 class="h2">Даты вашей поездки:</h2>
+        <label for="arrival">Дата приезда: <span>*</span></label>
+        <input type="date" name="arrival" id="arrival" required>
+        <label for="stay-length">Длительность пребывания: <span>*</span></label>
+        <div class="num-picker">
+          <button>-</button>
+          <input type="number" name="stay-length" id="stay-length" value="14">
+          <button>+</button>
+        </div>
+        <label for="departure">Дата отъезда: <span>*</span></label>
+        <input type="date" name="departure" id="departure" required>
+      </div>
+      <div class="travellers">
+        <h2 class="h2">Кол-во путешественников:</h2>
+        <label for="travelers-num">Количество путешественников: <span>*</span></label>
+        <div class="num-picker">
+          <button>-</button>
+          <input type="number" name="traveres-num" id="travelers-num" value="2">
+          <button>+</button>
+        </div>
+        <div class="traveller-details">
+          <div class="num-wrapper">
+            <p>&numero;</p>
+            <p class="traveller-num">1</p>
+          </div>
+          <div class="details-wrapper">
+            <label for="">Фамилия: <span>*</span></label>
+            <input type="text" value="Иванов">
+            <label for="">Имя:<span>*</span></label>
+            <input type="text" value="Пётр">
+            <label for="">Отчество:</label>
+            <input type="text" value="Александрович">
+          </div>
+        </div>
+        <div class="traveller-details">
+          <div class="num-wrapper">
+            <p>&numero;</p>
+            <p class="traveller-num">2</p>
+          </div>
+          <div class="details-wrapper">
+            <label for="">Фамилия: <span>*</span></label>
+            <input type="text" value="Иванов">
+            <label for="">Имя:<span>*</span></label>
+            <input type="text" value="Пётр">
+            <label for="">Отчество:</label>
+            <input type="text" value="Александрович">
+          </div>
+        </div>
+      </div>
+      <div class="sights">
+        <h2 class="h2">Посещенные достопримечательности:</h2>
+        <input type="checkbox" name="devil-bridge" id="devilBridge">
+        <label for="devilBridge">Мост Дьявола</label>
+        <input type="checkbox" name="slide-park" id="slidePark">
+        <label for="slidePark">Слайд-парк</label>
+        <input type="checkbox" name="bell-mountain" id="bellMountain">
+        <label for="bellMountain">Гора-Колокол</label>
+        <input type="checkbox" name="red-rocks" id="redRocks">
+        <label for="redRocks">Красные скалы</label>
+      </div>
+      <div class="photo-upload">
+        <h2 class="h2">Загрузите фотографии:</h2>
+        <button>Выбрать фотографии</button>
+        <div class="photo-previews">
+          <div class="photo-thumbnail">
+            <div class="closer"><span></span><span></span></div>
+            <img src="img/thumb-1.jpg" alt="">
+          </div>
+          <div class="photo-thumbnail">
+            <div class="closer"><span></span><span></span></div>
+            <img src="img/thumb-2.jpg" alt="">
+          </div>
+          <div class="photo-thumbnail">
+            <div class="closer"><span></span><span></span></div>
+            <img src="img/thumb-3.jpg" alt="">
+          </div>
+          <div class="photo-thumbnail">
+            <div class="closer"><span></span><span></span></div>
+            <img src="img/thumb-4.jpg" alt="">
+          </div>
+          <div class="photo-thumbnail">
+            <div class="closer"><span></span><span></span></div>
+            <img src="img/thumb-5.jpg" alt="">
+          </div>
+          <div class="photo-thumbnail">
+            <div class="closer"><span></span><span></span></div>
+            <img src="img/thumb-6.jpg" alt="">
+          </div>
+          <div class="photo-thumbnail">
+            <div class="closer"><span></span><span></span></div>
+            <img src="img/thumb-7.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Отправить Отзыв">
+    </form>
+  </div>
+  <footer>
+  	<h2 class="h3">&#35;VISITSEDONA</h3>
+  	<div class="social">
+  		<div class="btn-square btn-aqua twitter"><a href=""></a></div>
+  		<div class="btn-square btn-aqua facebook"><a href=""></a></div>
+  		<div class="btn-square btn-aqua youtube"><a href=""></a></div>
+  	</div>
+  	<p>Разработано <span class="sprites sprite-html-logo"></span></p>
+  </footer>
+
+  <div class="popup form-error">
+    <h2 class="h2">Что-то пошло не так!</h2>
+    <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button>Ок</button>
+  </div>
+  <div class="popup form-success">
+    <h2 class="h2">Что-то пошло не так!</h2>
+    <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <div class="btn-wrapper">
+      <button>Закрыть окно</button>
+    </div>
+  </div>
+
+  <!-- <script src="js/script.js"></script> -->
+
+</body>
+</html>
