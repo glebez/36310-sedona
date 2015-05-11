@@ -9,173 +9,189 @@
 
 <body>
 
-  <nav>
-  	<div class="menu-close">
-  		<span></span>
-  		<span></span>
-  	</div>
-  	<ul>
-  		<li><a href="">Карта Штата</a></li>
-  		<li><a href="">Информация</a></li>
-  		<li><a href="">Фото и видео</a></li>
-  		<li><a href="">Гостиницы</a></li>
-  	</ul>
+  <nav class="main-menu">
+    <div class="btn-previews__closer">
+      <span class="btn-previews__closer__bar"></span>
+      <span class="btn-previews__closer__bar"></span>
+    </div>
+    <ul class="main-menu__list">
+      <li class="main-menu__item"><a class="main-menu__link" href="">Карта Штата</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="">Информация</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="">Фото и видео</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="">Гостиницы</a></li>
+    </ul>
   </nav>
 
 
-  <header>
-  	<div class="logo"><a href="#"></a></div>
-  	<div class="menu-burger">
-  		<span></span>
-  		<span></span>
-  		<span></span>
-  	</div>
+  <header class="page-header">
+    <div class="logo"><a class="logo__link" href="#"></a></div>
+    <div class="menu-burger">
+      <span class="menu-burger__bar"></span>
+      <span class="menu-burger__bar"></span>
+      <span class="menu-burger__bar"></span>
+    </div>
   </header>
 
 
-  <div class="jumbo jumbo-folded">
-  	<h1 class="h1-small">Sedona</h1>
+  <div class="jumbo jumbo--folded">
+    <h1 class="jumbo__title--small">Sedona</h1>
   </div>
-  <div class="block-white">
-    <header>
-      <h2 class="h2">Оставьте свой отзыв</h2>
-      <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+  <main class="form-wrapper">
+    <header class="form-header">
+      <h2 class="form-header__title">Оставьте свой отзыв</h2>
+      <p class="form-text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </header>
     <form action="">
-      <div>
-        <h2 class="h2">Представьтесь, пожалуйста:</h2>
-        <label for="">Фамилия: <span>*</span></label>
-        <input type="text" value="Иванов" required>
-        <label for="">Имя: <span>*</span></label>
-        <input type="text" value="Петр" required>
-        <label for="">Отчество: <span>*</span></label>
-        <input type="text" value="Александрович">
+      <div class="form-group">
+        <h2 class="form-group__title">Представьтесь, пожалуйста:</h2>
+        <label class="form-group__label" for="surname">Фамилия: <span>*</span></label>
+        <input class="form-group__input" type="text" id="surname" name="surname" value="Иванов" required>
+        <label class="form-group__label" for="name">Имя: <span>*</span></label>
+        <input class="form-group__input" type="text" id="name" name="name" value="Петр" required>
+        <label class="form-group__label" for="midName">Отчество:</label>
+        <input class="form-group__input" type="text" id="midName" name="mid-name" value="Александрович">
       </div>
-      <div>
-        <h2 class="h2">Ваше общее впечатление:</h2>
-        <input type="radio" name="impression" id="imp1">
-        <label for="imp1">Скорее положительное</label>
-        <input type="radio" name="impression" id="imp2">
-        <label for="imp2">Скорее отрицательное</label>
+      <div class="form-group">
+        <h2 class="form-group__title">Ваше общее впечатление:</h2>
+        <input class="form-group__radio" type="radio" name="impression" id="imp1">
+        <label class="form-group__label form-group__label--radio" for="imp1">Скорее положительное</label>
+        <input class="form-group__radio" type="radio" name="impression" id="imp2">
+        <label class="form-group__label form-group__label--radio" for="imp2">Скорее отрицательное</label>
       </div>
-      <div class="tour-dates">
-        <h2 class="h2">Даты вашей поездки:</h2>
-        <label for="arrival">Дата приезда: <span>*</span></label>
-        <input type="date" name="arrival" id="arrival" required>
-        <label for="stay-length">Длительность пребывания: <span>*</span></label>
+      <div class="form-group">
+        <h2 class="form-group__title">Даты вашей поездки:</h2>
+        <label class="form-group__label" for="arrival">Дата приезда: <span>*</span></label>
+        <input class="form-group__input" type="date" name="arrival" id="arrival" required>
+        <label class="form-group__label" for="stay-length">Длительность пребывания: <span>*</span></label>
         <div class="num-picker">
-          <button>-</button>
-          <input type="number" name="stay-length" id="stay-length" value="14">
-          <button>+</button>
+          <button class="num-picker__btn">-</button>
+          <input class="num-picker__input" type="number" name="stay-length" id="stay-length" value="14">
+          <button class="num-picker__btn">+</button>
         </div>
-        <label for="departure">Дата отъезда: <span>*</span></label>
-        <input type="date" name="departure" id="departure" required>
+        <label class="form-group__label" for="departure">Дата отъезда: <span>*</span></label>
+        <input class="form-group__input" type="date" name="departure" id="departure" required>
       </div>
-      <div class="travellers">
-        <h2 class="h2">Кол-во путешественников:</h2>
-        <label for="travelers-num">Количество путешественников: <span>*</span></label>
+      <div class="form-group">
+        <h2 class="form-group__title">Кол-во путешественников:</h2>
+        <label class="form-group__label" for="travelers-num">Количество путешественников: <span>*</span></label>
         <div class="num-picker">
-          <button>-</button>
-          <input type="number" name="traveres-num" id="travelers-num" value="2">
-          <button>+</button>
+          <button class="num-picker__btn">-</button>
+          <input class="num-picker__input" type="number" name="traveres-num" id="travelers-num" value="2">
+          <button class="num-picker__btn">+</button>
         </div>
-        <div class="traveller-details">
-          <div class="num-wrapper">
-            <p>&numero;</p>
-            <p class="traveller-num">1</p>
-          </div>
-          <div class="details-wrapper">
-            <label for="">Фамилия: <span>*</span></label>
-            <input type="text" value="Иванов">
-            <label for="">Имя:<span>*</span></label>
-            <input type="text" value="Пётр">
-            <label for="">Отчество:</label>
-            <input type="text" value="Александрович">
-          </div>
-        </div>
-        <div class="traveller-details">
-          <div class="num-wrapper">
-            <p>&numero;</p>
-            <p class="traveller-num">2</p>
-          </div>
-          <div class="details-wrapper">
-            <label for="">Фамилия: <span>*</span></label>
-            <input type="text" value="Иванов">
-            <label for="">Имя:<span>*</span></label>
-            <input type="text" value="Пётр">
-            <label for="">Отчество:</label>
-            <input type="text" value="Александрович">
+        <div class="form-group">
+          <div class="traveller-info">
+            <div class="traveller-info__num-wrapper">
+              <p class="form-group__label--centered">&numero;</p>
+              <p class="traveller-info__num">1</p>
+            </div>
+            <div class="traveler-info__details">
+              <label class="form-group__label" for="">Фамилия: <span>*</span></label>
+              <input class="form-group__input" type="text" id="travSurname1" name="trav-surname-1" value="Иванов" required>
+              <label class="form-group__label" for="">Имя:<span>*</span></label>
+              <input class="form-group__input" type="text" id="travName1" name="trav-name-1" value="Пётр" required>
+              <label class="form-group__label" for="">Отчество:</label>
+              <input class="form-group__input" type="text" id="travMidname1" name="trav-midname-1" value="Александрович">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="sights">
-        <h2 class="h2">Посещенные достопримечательности:</h2>
-        <input type="checkbox" name="devil-bridge" id="devilBridge">
-        <label for="devilBridge">Мост Дьявола</label>
-        <input type="checkbox" name="slide-park" id="slidePark">
-        <label for="slidePark">Слайд-парк</label>
-        <input type="checkbox" name="bell-mountain" id="bellMountain">
-        <label for="bellMountain">Гора-Колокол</label>
-        <input type="checkbox" name="red-rocks" id="redRocks">
-        <label for="redRocks">Красные скалы</label>
-      </div>
-      <div class="photo-upload">
-        <h2 class="h2">Загрузите фотографии:</h2>
-        <button>Выбрать фотографии</button>
-        <div class="photo-previews">
-          <div class="photo-thumbnail">
-            <div class="closer"><span></span><span></span></div>
-            <img src="img/thumb-1.jpg" alt="">
+        <div class="traveller-info">
+          <div class="traveller-info__num-wrapper">
+            <p class="form-group__label--centered">&numero;</p>
+            <p class="traveller-info__num">2</p>
           </div>
-          <div class="photo-thumbnail">
-            <div class="closer"><span></span><span></span></div>
-            <img src="img/thumb-2.jpg" alt="">
-          </div>
-          <div class="photo-thumbnail">
-            <div class="closer"><span></span><span></span></div>
-            <img src="img/thumb-3.jpg" alt="">
-          </div>
-          <div class="photo-thumbnail">
-            <div class="closer"><span></span><span></span></div>
-            <img src="img/thumb-4.jpg" alt="">
-          </div>
-          <div class="photo-thumbnail">
-            <div class="closer"><span></span><span></span></div>
-            <img src="img/thumb-5.jpg" alt="">
-          </div>
-          <div class="photo-thumbnail">
-            <div class="closer"><span></span><span></span></div>
-            <img src="img/thumb-6.jpg" alt="">
-          </div>
-          <div class="photo-thumbnail">
-            <div class="closer"><span></span><span></span></div>
-            <img src="img/thumb-7.jpg" alt="">
+          <div class="traveler-info__details">
+            <label class="form-group__label" for="travSurname2">Фамилия: <span>*</span></label>
+            <input class="form-group__input" type="text" id="travSurname2" name="trav-surname-2" value="Иванов" required>
+            <label class="form-group__label" for="travName2">Имя:<span>*</span></label>
+            <input class="form-group__input" type="text" id="travName2" name="trav-name-2" value="Пётр" required>
+            <label class="form-group__label" for="travMidname2">Отчество:</label>
+            <input class="form-group__input" type="text" id="travMidname2" name="trav-midname-2" value="Александрович">
           </div>
         </div>
       </div>
-      <input type="submit" value="Отправить Отзыв">
+      <div class="form-group">
+        <h2 class="form-group__title">Посещенные достопримечательности:</h2>
+        <input class="form-input--checkbox" type="checkbox" name="devil-bridge" id="devilBridge">
+        <label class="form-group__label--checkbox" for="devilBridge">Мост Дьявола</label>
+        <input class="form-input--checkbox" type="checkbox" name="slide-park" id="slidePark">
+        <label class="form-group__label--checkbox" for="slidePark">Слайд-парк</label>
+        <input class="form-input--checkbox"type="checkbox" name="bell-mountain" id="bellMountain">
+        <label class="form-group__label--checkbox" for="bellMountain">Гора-Колокол</label>
+        <input class="form-input--checkbox" type="checkbox" name="red-rocks" id="redRocks">
+        <label class="form-group__label--checkbox" for="redRocks">Красные скалы</label>
+      </div>
+      <div class="forn-group">
+        <h2 class="form-group__title">Загрузите фотографии:</h2>
+        <button class="btn btn--disabled">Выбрать фотографии</button>
+        <div class="previews">
+          <div class="previews__thumbnail">
+            <div class="previews__closer"><span></span><span></span></div>
+            <div class="previews__img-wrap">
+              <img src="img/thumb-1.jpg" alt="">
+            </div>
+          </div>
+          <div class="previews__thumbnail">
+            <div class="previews__closer"><span></span><span></span></div>
+            <div class="previews__img-wrap">
+              <img src="img/thumb-2.jpg" alt="">
+            </div>
+          </div>
+          <div class="previews__thumbnail">
+            <div class="previews__closer"><span></span><span></span></div>
+            <div class="previews__img-wrap">
+              <img src="img/thumb-3.jpg" alt="">
+            </div>
+          </div>
+          <div class="previews__thumbnail">
+            <div class="previews__closer"><span></span><span></span></div>
+            <div class="previews__img-wrap">
+              <img src="img/thumb-4.jpg" alt="">
+            </div>
+          </div>
+          <div class="previews__thumbnail">
+            <div class="previews__closer"><span></span><span></span></div>
+            <div class="previews__img-wrap">
+              <img src="img/thumb-5.jpg" alt="">
+            </div>
+          </div>
+          <div class="previews__thumbnail">
+            <div class="previews__closer"><span></span><span></span></div>
+            <div class="previews__img-wrap">
+              <img src="img/thumb-6.jpg" alt="">
+            </div>
+          </div>
+          <div class="previews__thumbnail">
+            <div class="previews__closer"><span></span><span></span></div>
+            <div class="previews__img-wrap">
+              <img src="img/thumb-7.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <input class="btn" type="submit" value="Отправить Отзыв">
     </form>
-  </div>
-  <footer>
-  	<h2 class="h3">&#35;VISITSEDONA</h3>
-  	<div class="social">
-  		<div class="btn-square btn-aqua twitter"><a href=""></a></div>
-  		<div class="btn-square btn-aqua facebook"><a href=""></a></div>
-  		<div class="btn-square btn-aqua youtube"><a href=""></a></div>
-  	</div>
-  	<p>Разработано <span class="sprites sprite-html-logo"></span></p>
+  </main>
+  <footer class="page-footer">
+    <h2 class="page-footer__title">&#35;VISITSEDONA</h3>
+    <ul class="social-links">
+      <li class="social-links__item  social-links__item--twi"></li>
+      <li class="social-links__item  social-links__item--fb"></li>
+      <li class="social-links__item  social-links__item--tube"></li>
+    </ul>
+    <p class="testimonial">Разработано <span class="sprites sprites--htmlacademy-logo"></span></p>
   </footer>
 
-  <div class="popup form-error">
-    <h2 class="h2">Что-то пошло не так!</h2>
+  <div class="popup" id="form-error">
+    <h2 class="popup__title">Что-то пошло не так!</h2>
     <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-    <button>Ок</button>
+    <button class="btn btn--short">Ок</button>
   </div>
-  <div class="popup form-success">
-    <h2 class="h2">Что-то пошло не так!</h2>
+  <div class="popup" id="form-success">
+    <h2 class="popup__title">Что-то пошло не так!</h2>
     <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-    <div class="btn-wrapper">
-      <button>Закрыть окно</button>
+    <div class="popup__btn-wrapper">
+      <button class="btn">Закрыть окно</button>
     </div>
   </div>
 
