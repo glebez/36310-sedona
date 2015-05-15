@@ -3,8 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: sedona</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -24,7 +28,11 @@
 
 
   <header class="page-header">
-  	<div class="logo"><a class="logo__link" href="#"></a></div>
+  	<div class="logo__wrapper">
+      <div class="logo">
+        <a class="logo__link" href="#"></a>
+      </div>
+    </div>
   	<div class="menu-burger">
   		<span class="menu-burger__bar"></span>
   		<span class="menu-burger__bar"></span>
@@ -34,16 +42,15 @@
 
 
   <div class="jumbo">
-  	<p class="jumbo__pre-title">Welcome</p>
-    <p class="jumbo__subtext">to the gorgeous</p>
+  	<p class="jumbo__pre-title">Welcome to the gorgeous</p>
   	<h1 class="jumbo__title">Sedona</h1>
   	<p class="jumbo__quote">"Because the grand canyon sucks!"</p>
   </div>
   <div class="intro">
   	<h2 class="intro__title">Седона — небольшой <br>городок в Аризоне, <br>заслуживающий большего!</h2>
-  	<p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+  	<p class="intro__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
   </div>
-  <div class="reason">
+  <div class="reason reason--arrow-top">
   	<h2 class="reason__title">Настоящий городок</h2>
   	<p class="reason__num">&numero; 1</p>
   	<p class="reason__text">Cедона не атракцион для туристов, там течет своя жизнь</p>
@@ -51,19 +58,31 @@
   <div class="photo-breaker  photo-breaker--saloon"></div>
   <div class="benefits-list">
   	<div class="benefit">
-  		<div class="sprites  sprites--house"></div>
-  		<h3 class="benefit__title">Жилье</h3>
-  		<p class="benefit__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+  		<div class="benefit__img-wrap">
+        <div class="sprites  sprites--house"></div>
+      </div>
+  		<div class="benefit__content-wrap">
+        <h3 class="benefit__title">Жилье</h3>
+        <p class="benefit__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      </div>
   	</div>
   	<div class="benefit">
-  		<div class="sprites sprites--gift"></div>
-  		<h3 class="benefit__title">Сувениры</h3>
-  		<p class="benefit__text">Не только китайского, но и местного производства!</p>
+  		<div class="benefit__img-wrap">
+        <div class="sprites sprites--gift"></div>
+      </div>
+  		<div class="benefit__content-wrap">
+        <h3 class="benefit__title">Сувениры</h3>
+        <p class="benefit__text">Не только китайского, но и местного производства!</p>
+      </div>
   	</div>
   	<div class="benefit">
-  		<div class="sprites sprites--hamburger"></div>
-  		<h3 class="benefit__title">Еда</h3>
-  		<p class="benefit__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+  		<div class="benefit__img-wrap">
+        <div class="sprites sprites--hamburger"></div>
+      </div>
+  		<div class="benefit__content-wrap">
+        <h3 class="benefit__title">Еда</h3>
+        <p class="benefit__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      </div>
   	</div>
   </div>
   <div class="reason">
@@ -71,22 +90,28 @@
   	<p class="reason__num">&numero; 2</p>
   	<p class="reason__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
   </div>
-  <div class="photo-breaker photo-breaker--сanyon"></div>
+  <div class="photo-breaker photo-breaker--canyon"></div>
   <div class="reasons-list">
   	<div class="reason reason--dark">
-  		<h2 class="reason__title">Небольшая Площадь</h2>
-  		<p class="reason__num">&numero; 3</p>
-  		<p class="reason__text">Все достопримечательности находятся очень близко</p>
+  		<div class="reason__content-wrap">
+        <h2 class="reason__title">Небольшая Площадь</h2>
+        <p class="reason__num">&numero; 3</p>
+        <p class="reason__text">Все достопримечательности находятся очень близко</p>
+      </div>
   	</div>
   	<div class="reason reason--dark">
-  		<h2 class="reason__title">Красивая Дорога</h2>
-  		<p class="reason__num">&numero; 4</p>
-  		<p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+  		<div class="reason__content-wrap">
+        <h2 class="reason__title">Красивая Дорога</h2>
+        <p class="reason__num">&numero; 4</p>
+        <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      </div>
   	</div>
   	<div class="reason reason--dark">
-  		<h2 class="reason__title">Мало Туристов</h2>
-  		<p class="reaso__num">&numero; 5</p>
-  		<p class="reason__text">Большинство едет в гранд каньон и толпится там</p>
+  		<div class="reason__content-wrap">
+        <h2 class="reason__title">Мало Туристов</h2>
+        <p class="reason__num">&numero; 5</p>
+        <p class="reason__text">Большинство едет в гранд каньон и толпится там</p>
+      </div>
   	</div>
   </div>
   <div class="promo">
@@ -94,7 +119,7 @@
   	<p class="promo__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
   	<a class="btn  btn--aqua  promo__btn">Найти гостиницу</a>
   </div>
-  <iframe class="map" src="" frameborder="0"></iframe>
+  <div class="map"></div>
   
 
 
@@ -105,10 +130,11 @@
       <li class="social-links__item  social-links__item--fb"></li>
       <li class="social-links__item  social-links__item--tube"></li>
     </ul>
-  	<p class="testimonial">Разработано <span class="sprites sprites--htmlacademy-logo"></span></p>
+  	<p class="page-footer__testimonial">Разработано <span class="sprites sprites--htmlacademy-logo"></span></p>
   </footer>
 
   <!-- <script src="js/script.js"></script> -->
+
 
 </body>
 </html>

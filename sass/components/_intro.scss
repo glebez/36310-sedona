@@ -1,0 +1,16 @@
+.intro {
+  padding: 45px 20px 25px;
+  color: $text-color;
+  text-align: center;
+  text-transform: uppercase;
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 700;
+    @include font-size(1.8);
+    line-height: (26 / 18);
+  }
+  &__text {
+    @include font-size(1.4);
+    line-height: (26 / 14);
+  }
+}

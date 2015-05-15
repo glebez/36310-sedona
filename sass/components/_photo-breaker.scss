@@ -1,0 +1,12 @@
+.photo-breaker {
+  width: 100%;
+  height: 255px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &--canyon {
+    background-image: url('../img/bg-canyon.jpg');
+  }
+  &--saloon {
+    background-image: url('../img/bg-saloon.jpg');
+  }
+}

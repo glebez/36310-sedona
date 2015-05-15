@@ -1,0 +1,18 @@
+.page-footer {
+  padding: 40px 20px 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 700;
+    @include font-size(2.1);
+    line-height: (26 / 21);
+  }
+
+  &__testimonial {
+    @include font-size(1.4);
+    line-height: (26 / 14);
+
+  }
+}

@@ -1,0 +1,22 @@
+.btn-closer {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  cursor: pointer;
+
+  &__bar {
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 4px;
+    background-color: $text-color-contrast;
+    &:first-child {
+      transform: rotate(-45deg);
+    }
+    &:last-child {
+      top: -4px;
+      transform: rotate(45deg);
+
+    }
+  }
+}
