@@ -1,0 +1,22 @@
+.post-preview {
+  padding: 40px 0 35px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid $border-lightly-muted; 
+
+	&__title {
+    margin-bottom: 25px;
+	  @include title;
+	}
+
+  &__text {
+    margin-bottom: 25px;
+    @include font-size(1.4);
+    line-height: (26 / 14);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+}

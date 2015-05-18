@@ -1,0 +1,40 @@
+.post-data {
+
+  &__timestamp,
+  &__tags {
+    float: left;
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-position: 5px 7px;
+    font-style: italic;
+    color: $text-color-lightly-muted;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include font-size(1.4);
+    line-height: (26 / 14);
+  }
+
+  &__timestamp {
+    margin-right: 20px;
+    background-image: url('../img/icon-cal.png');
+  }
+
+  &__tags {
+    background-image: url('../img/icon-tag.png');
+
+    &--float-right {
+      float: right;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 25px;
+
+  }
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

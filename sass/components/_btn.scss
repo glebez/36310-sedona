@@ -1,0 +1,30 @@
+.btn {
+  display: block;
+  width: 100%;
+  padding: 17px 15px 13px;
+  border: none;
+  font-family: $base-font-family;
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-color-contrast;
+  background-color: $bg-color-contrast;
+  font-weight: 700;
+  @include font-size(2.1);
+  line-height: (26 / 21);
+
+  &--disabled {
+    background-color: $bg-color-lightly-muted;
+    color: $text-color-muted;
+  }
+
+  &--short {
+    width: (180/230 * 100%);
+    margin: 0 auto;
+  }
+
+  &--ghost {
+    background-color: $bg-color;
+    border: 2px solid $bg-color-contrast;
+    color: $text-color;
+  }
+}

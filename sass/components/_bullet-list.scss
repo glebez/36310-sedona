@@ -1,0 +1,22 @@
+.bullet-list {
+  margin-bottom: 35px;
+
+  &__item {
+    position: relative;
+    padding-left: 15px;
+    font-weight: 700;
+    @include font-size(1.4);
+    line-height: (24 / 14);
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -4px;
+      height: 7px;
+      width: 7px;
+      background-color: $bg-color-contrast;
+    }
+  }
+}

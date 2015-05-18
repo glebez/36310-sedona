@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: sedona</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -24,7 +26,11 @@
 
 
   <header class="page-header">
-    <div class="logo"><a class="logo__link" href="#"></a></div>
+    <div class="logo__wrapper">
+      <div class="logo">
+        <a class="logo__link" href="#"></a>
+      </div>
+    </div>
     <div class="menu-burger">
       <span class="menu-burger__bar"></span>
       <span class="menu-burger__bar"></span>
@@ -34,45 +40,55 @@
 
 
   <div class="jumbo jumbo--folded">
-    <h1 class="jumbo__title--small">Sedona</h1>
+    <h1 class="jumbo__title jumbo__title--small">Sedona</h1>
   </div>
-  <main class="post-wrapper">
-    <header class="blog-intro">
-      <h2 class="blog-intro__title">Блог Шерифа</h2>
-      <p class="blog-intro__text">Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
-    </header>
-  	<div class="post-summary">
-  		<h3 class="post-summary__title">Внимание! Cбежала моя домашняя анаконда</h3>
-  		<p>Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
-      <div class="post-data">
-        <p class="post-data__timestamp">Позавчера</p>
-        <p class="post-data__tags">Происшествия</p>
+  <main>
+    <div class="post-wrapper">
+      <header class="blog-intro  blog-intro--borderless">
+        <h2 class="blog-intro__title">Блог Шерифа</h2>
+        <p class="blog-intro__text">Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
+        <div class="post-data__wrapper">
+          <div class="post-data">
+            <p class="post-data__timestamp">Позавчера</p>
+            <p class="post-data__tags post-data__tags--float-right">Происшествия</p>
+          </div>
+        </div>
+      </header>
+          <div class="post-summary">
+            <h3 class="post-summary__title">Внимание! Cбежала моя домашняя анаконда</h3>
+            <p class="post-summary__text">Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
       </div>
-    </div>
-    <div class="post-body">
-      <h4 class="post-body__title">Предыстория</h4>
-      <p class="post-body__text">В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал  тогда: «Если доедет до Седоны живой, так и быть, оставлю ее себе»</p>
-      <h4 class="post-body__title">Пропажа</h4>
-      <p class="post-body__text">Неделю назад я вернулся из канзаса и не нашел Анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам. особые приметы змеи:</p>
-      <ul class="bullet-list">
-        <li class="bullet-list__item">Длина: 5 метров</li>
-        <li class="bullet-list__item">Масса: 85 кг</li>
-        <li class="bullet-list__item">Окраска: серовато-зелёная</li>
-      </ul>
-      <p class="post-body__text">Если вы увидите эту змею, сразу <a class="post-body__link" href="">звоните 911</a> и бегите со всех ног от нее!</p>
-      <h4 class="post-body__title">Предостережение</h4>
-      <p class="post-body__text">не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
-      <blockquote class="quote">
-        <p class="quote__body">Самый свирепый из зверей — теперь мы знаем — это человек, он убивает даже если не голоден.</p>
-        <footer class="quote__author">Адриано Челентано</footer>
-      </blockquote>
+      <div class="post-body">
+        <h4 class="post-body__title">Предыстория</h4>
+        <p class="post-body__text">В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал  тогда: «Если доедет до Седоны живой, так и быть, оставлю ее себе»</p>
+        <h4 class="post-body__title">Пропажа</h4>
+        <p class="post-body__text">Неделю назад я вернулся из канзаса и не нашел Анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам. особые приметы змеи:</p>
+        <ul class="bullet-list">
+          <li class="bullet-list__item">Длина: 5 метров</li>
+          <li class="bullet-list__item">Масса: 85 кг</li>
+          <li class="bullet-list__item">Окраска: серовато-зелёная</li>
+        </ul>
+        <p class="post-body__text">Если вы увидите эту змею, сразу <a class="post-body__link" href="">звоните 911</a> и бегите со всех ног от нее!</p>
+        <h4 class="post-body__title">Предостережение</h4>
+        <p class="post-body__text">не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
+        <blockquote class="quote">
+          <p class="quote__body">Самый свирепый из зверей — теперь мы знаем — это человек, он убивает даже если не голоден.</p>
+          <footer class="quote__author">Адриано Челентано</footer>
+        </blockquote>
+      </div>
     </div>
   		
 
   	<div class="post-nav">
-  		<div class="btn-ghost btn-ghost--half"><a class="btn-ghost__link" href="">Пред.</a></div>
-  		<div class="btn-ghost btn-ghost--half"><a class="btn-ghost__link" href="">След.</a></div>
-  		<div class="btn-ghost"><a class="btn-ghost__link" href="">Назад к списку</a></div>
+  		<div class="post-nav__btn-row">
+        <div class="post-nav__btn-wrapper">
+          <a class="btn btn--ghost" href="">Пред.</a>
+        </div>
+        <div class="post-nav__btn-wrapper">
+          <a class="btn btn--ghost" href="">След.</a>
+        </div>
+      </div>
+  		<a class="btn btn--ghost" href="">Назад к списку</a>
   	</div>
   </main>
   <footer class="page-footer">

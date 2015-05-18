@@ -20,27 +20,7 @@ body {
   background-repeat: no-repeat; 
 }
 
-.btn {
-  display: block;
-  width: 100%;
-  padding: 17px 15px 13px;
-  border: none;
-  font-family: $base-font-family;
-  text-transform: uppercase;
-  text-align: center;
-  color: $text-color-contrast;
-  background-color: $bg-color-contrast;
-  font-weight: 700;
-  @include font-size(2.1);
-  line-height: (26 / 21);
-
-  &--disabled {
-    background-color: #f2f2f2;
-    color: $text-color-muted;
-  }
-
-  &--short {
-    width: (180/230 * 100%);
-    margin: 0 auto;
-  }
+.blog-wrapper,
+.post-wrapper {
+  margin: 0 20px;
 }
