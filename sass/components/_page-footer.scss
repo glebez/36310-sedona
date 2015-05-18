@@ -5,9 +5,7 @@
 
   &__title {
     margin-bottom: 40px;
-    font-weight: 700;
-    @include font-size(2.1);
-    line-height: (26 / 21);
+    @include title(21, 26);
   }
 
   &__testimonial {
@@ -15,4 +13,5 @@
     line-height: (26 / 14);
 
   }
+  
 }

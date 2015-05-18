@@ -3,9 +3,7 @@
   text-transform: uppercase;
   &__title {
     margin-bottom: 20px;
-    font-weight: 700;
-    @include font-size(1.8);
-    line-height: (26 / 18);
+    @include title();
   }
   &__text {
     @include font-size(1.4);

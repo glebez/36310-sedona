@@ -2,3 +2,9 @@
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;
 }
+
+@mixin title($fontSize: 18, $lineHeight: 26) {
+  @include font-size($fontSize / 10);
+  line-height: ($lineHeight / $fontSize);
+  font-weight: 700;
+}

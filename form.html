@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: sedona</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -24,7 +26,11 @@
 
 
   <header class="page-header">
-    <div class="logo"><a class="logo__link" href="#"></a></div>
+    <div class="logo__wrapper">
+      <div class="logo">
+        <a class="logo__link" href="#"></a>
+      </div>
+    </div>
     <div class="menu-burger">
       <span class="menu-burger__bar"></span>
       <span class="menu-burger__bar"></span>
@@ -34,12 +40,13 @@
 
 
   <div class="jumbo jumbo--folded">
-    <h1 class="jumbo__title--small">Sedona</h1>
+    <h1 class="jumbo__title  jumbo__title--small">Sedona</h1>
   </div>
+
   <main class="form-wrapper">
     <header class="form-header">
       <h2 class="form-header__title">Оставьте свой отзыв</h2>
-      <p class="form-text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <p class="form-header__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </header>
     <form action="">
       <div class="form-group">
@@ -53,7 +60,7 @@
       </div>
       <div class="form-group">
         <h2 class="form-group__title">Ваше общее впечатление:</h2>
-        <input class="form-group__radio" type="radio" name="impression" id="imp1">
+        <input class="form-group__radio" type="radio" name="impression" id="imp1" checked>
         <label class="form-group__label form-group__label--radio" for="imp1">Скорее положительное</label>
         <input class="form-group__radio" type="radio" name="impression" id="imp2">
         <label class="form-group__label form-group__label--radio" for="imp2">Скорее отрицательное</label>
@@ -61,46 +68,50 @@
       <div class="form-group">
         <h2 class="form-group__title">Даты вашей поездки:</h2>
         <label class="form-group__label" for="arrival">Дата приезда: <span>*</span></label>
-        <input class="form-group__input" type="date" name="arrival" id="arrival" required>
+        <input class="form-group__input" type="text" value="4 июля 2015" name="arrival" id="arrival" required>
         <label class="form-group__label" for="stay-length">Длительность пребывания: <span>*</span></label>
         <div class="num-picker">
-          <button class="num-picker__btn">-</button>
-          <input class="num-picker__input" type="number" name="stay-length" id="stay-length" value="14">
-          <button class="num-picker__btn">+</button>
+          <button class="num-picker__btn num-picker__btn--minus">-</button>
+          <div class="num-picker__input-measure num-picker__input-measure--days">
+            <input class="form-group__input form-group__input--padded-right" type="number" name="stay-length" id="stay-length" value="14">
+          </div>
+          
+          <button class="num-picker__btn num-picker__btn--plus">+</button>
         </div>
         <label class="form-group__label" for="departure">Дата отъезда: <span>*</span></label>
-        <input class="form-group__input" type="date" name="departure" id="departure" required>
+        <input class="form-group__input form-group__input--bordered" type="text" value="28 июля 2015" name="departure" id="departure" required>
       </div>
       <div class="form-group">
         <h2 class="form-group__title">Кол-во путешественников:</h2>
         <label class="form-group__label" for="travelers-num">Количество путешественников: <span>*</span></label>
         <div class="num-picker">
-          <button class="num-picker__btn">-</button>
-          <input class="num-picker__input" type="number" name="traveres-num" id="travelers-num" value="2">
-          <button class="num-picker__btn">+</button>
+          <button class="num-picker__btn num-picker__btn--minus">-</button>
+          <div class="num-picker__input-measure num-picker__input-measure--people">
+            <input class="form-group__input form-group__input--padded-right" type="number" name="stay-length" id="stay-length" value="14">
+          </div>
+          
+          <button class="num-picker__btn num-picker__btn--plus">+</button>
         </div>
-        <div class="form-group">
-          <div class="traveller-info">
-            <div class="traveller-info__num-wrapper">
-              <p class="form-group__label--centered">&numero;</p>
-              <p class="traveller-info__num">1</p>
-            </div>
-            <div class="traveler-info__details">
-              <label class="form-group__label" for="">Фамилия: <span>*</span></label>
-              <input class="form-group__input" type="text" id="travSurname1" name="trav-surname-1" value="Иванов" required>
-              <label class="form-group__label" for="">Имя:<span>*</span></label>
-              <input class="form-group__input" type="text" id="travName1" name="trav-name-1" value="Пётр" required>
-              <label class="form-group__label" for="">Отчество:</label>
-              <input class="form-group__input" type="text" id="travMidname1" name="trav-midname-1" value="Александрович">
-            </div>
+        <div class="traveller-info">
+          <div class="traveller-info__num-wrapper">
+            <p class="form-group__label form-group__label--centered">&numero;</p>
+            <p class="traveller-info__num">1</p>
+          </div>
+          <div class="traveller-info__details">
+            <label class="form-group__label" for="">Фамилия: <span>*</span></label>
+            <input class="form-group__input" type="text" id="travSurname1" name="trav-surname-1" value="Иванов" required>
+            <label class="form-group__label" for="">Имя:<span>*</span></label>
+            <input class="form-group__input" type="text" id="travName1" name="trav-name-1" value="Пётр" required>
+            <label class="form-group__label" for="">Отчество:</label>
+            <input class="form-group__input" type="text" id="travMidname1" name="trav-midname-1" value="Александрович">
           </div>
         </div>
         <div class="traveller-info">
           <div class="traveller-info__num-wrapper">
-            <p class="form-group__label--centered">&numero;</p>
+            <p class="form-group__label form-group__label--centered">&numero;</p>
             <p class="traveller-info__num">2</p>
           </div>
-          <div class="traveler-info__details">
+          <div class="traveller-info__details">
             <label class="form-group__label" for="travSurname2">Фамилия: <span>*</span></label>
             <input class="form-group__input" type="text" id="travSurname2" name="trav-surname-2" value="Иванов" required>
             <label class="form-group__label" for="travName2">Имя:<span>*</span></label>
@@ -111,18 +122,18 @@
         </div>
       </div>
       <div class="form-group">
-        <h2 class="form-group__title">Посещенные достопримечательности:</h2>
-        <input class="form-input--checkbox" type="checkbox" name="devil-bridge" id="devilBridge">
-        <label class="form-group__label--checkbox" for="devilBridge">Мост Дьявола</label>
-        <input class="form-input--checkbox" type="checkbox" name="slide-park" id="slidePark">
-        <label class="form-group__label--checkbox" for="slidePark">Слайд-парк</label>
-        <input class="form-input--checkbox"type="checkbox" name="bell-mountain" id="bellMountain">
-        <label class="form-group__label--checkbox" for="bellMountain">Гора-Колокол</label>
-        <input class="form-input--checkbox" type="checkbox" name="red-rocks" id="redRocks">
-        <label class="form-group__label--checkbox" for="redRocks">Красные скалы</label>
+        <h2 class="form-group__title form-group__title--tight">Посещенные достопримечательности:</h2>
+        <input class="form-group__checkbox" type="checkbox" name="devil-bridge" id="devilBridge" checked>
+        <label class="form-group__label form-group__label--checkbox" for="devilBridge">Мост Дьявола</label>
+        <input class="form-group__checkbox" type="checkbox" name="slide-park" id="slidePark">
+        <label class="form-group__label form-group__label--checkbox" for="slidePark">Слайд-парк</label>
+        <input class="form-group__checkbox"type="checkbox" name="bell-mountain" id="bellMountain" checked>
+        <label class="form-group__label form-group__label--checkbox" for="bellMountain">Гора-Колокол</label>
+        <input class="form-group__checkbox" type="checkbox" name="red-rocks" id="redRocks" checked>
+        <label class="form-group__label form-group__label--checkbox" for="redRocks">Красные скалы</label>
       </div>
-      <div class="forn-group">
-        <h2 class="form-group__title">Загрузите фотографии:</h2>
+      <div class="form-group form-group--borderless">
+        <h2 class="form-group__title form-group__title--tight">Загрузите фотографии:</h2>
         <button class="btn btn--disabled">Выбрать фотографии</button>
         <div class="previews">
           <div class="previews__thumbnail">
@@ -168,8 +179,9 @@
             </div>
           </div>
         </div>
+        <input class="btn" type="submit" value="Отправить Отзыв">
       </div>
-      <input class="btn" type="submit" value="Отправить Отзыв">
+      
     </form>
   </main>
   <footer class="page-footer">
@@ -179,17 +191,18 @@
       <li class="social-links__item  social-links__item--fb"></li>
       <li class="social-links__item  social-links__item--tube"></li>
     </ul>
-    <p class="testimonial">Разработано <span class="sprites sprites--htmlacademy-logo"></span></p>
+    <p class="page-footer__testimonial">Разработано <span class="sprites sprites--htmlacademy-logo"></span></p>
   </footer>
 
-  <div class="popup" id="form-error">
+  <div class="popup popup--error" id="form-error">
     <h2 class="popup__title">Что-то пошло не так!</h2>
-    <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     <button class="btn btn--short">Ок</button>
   </div>
-  <div class="popup" id="form-success">
-    <h2 class="popup__title">Что-то пошло не так!</h2>
-    <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+  <div class="popup  popup--success" id="form-success">
+    <h2 class="popup__title">Ваш отзыв отправлен!</h2>
+    <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+В ближайшее время мы опубликуем его на сайте.</p>
     <div class="popup__btn-wrapper">
       <button class="btn">Закрыть окно</button>
     </div>

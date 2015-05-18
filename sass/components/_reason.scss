@@ -10,9 +10,7 @@
   }
   &__title {
     margin-bottom: 15px;
-    font-weight: 700;
-    @include font-size(1.8);
-    line-height: (26 / 18);
+    @include title();
   }
   &__num{
     margin-bottom: 25px;
