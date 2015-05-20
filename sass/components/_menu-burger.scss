@@ -14,4 +14,12 @@
       margin-bottom: 0;
     }
   }
+
+  &__wrapper {
+    float: right;
+  }
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    display: none;
+  }
 }

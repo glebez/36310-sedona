@@ -12,13 +12,15 @@
 
   &__img-wrap {
     float: left;
-    width: 50px;
+    width: 50/(320-40)*100%;
+    min-width: 50px;
   }
 
   &__content-wrap {
     padding: 10px 0 15px;
     float: left;
-    width: 230px;
+    width: 230/(320-40)*100%;
+    min-width: 230px;
   }
 
   &:after {

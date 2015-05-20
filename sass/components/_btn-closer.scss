@@ -16,7 +16,10 @@
     &:last-child {
       top: -4px;
       transform: rotate(45deg);
-
     }
+  }
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    display: none;
   }
 }

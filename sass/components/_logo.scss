@@ -5,9 +5,14 @@
   background-image: url(../img/logo.png);
 
   &__wrapper {
-    float: left;
-    width: 228px; // 320 - 60 (menu button & equal margin on the left) -32 (padding)
+    flex: 1 0 auto;
+    //float: left;
+    //width: 78%; // 320 - 60 (menu button & equal margin on the left) -32 (padding)
     margin: -13px 0 -28px 30px;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-left: 0;
+    }
   }
 
   &__link {

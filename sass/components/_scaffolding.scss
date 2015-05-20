@@ -24,3 +24,9 @@ body {
 .post-wrapper {
   margin: 0 20px;
 }
+
+.visible-xs {
+  @media screen and (min-width: ($tablet-width - 1)) {
+    display: none;
+  }
+}

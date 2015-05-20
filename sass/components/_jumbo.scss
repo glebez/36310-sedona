@@ -4,6 +4,7 @@
   background-image: url('../img/bg-triangle-edge-1.png'), url('../img/bg-jumbo-lg.jpg');
   background-position: 50% 100%, 50% 0;
   background-repeat: no-repeat, no-repeat;
+  background-size: 100%, cover;
 
   &__pre-title {
     display: block;
