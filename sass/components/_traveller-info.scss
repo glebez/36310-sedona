@@ -1,0 +1,35 @@
+.traveller-info {
+	margin-top: 15px;
+
+
+	&__num-wrapper {
+		float: left;
+		width: 21%;
+		margin-right: 2%;
+		text-align: center;
+	}
+
+	&__num {
+		height: 60px;
+		padding-top: 20px;
+		border: none;
+		background-color: $bg-color-muted;
+		@include font-size(1.8);
+		font-weight: 700;
+	}
+
+	&__details {
+		float: left;
+		width: 77%;
+	}
+
+	&:first-of-type {
+		padding-top: 25px;
+	}
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}

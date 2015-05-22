@@ -1,30 +1,35 @@
-$color: #fff;
-$bg-color: #000;
-$wrap-width: 300px;
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "components/scaffolding";
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: $bg-color;
-  color: $color;
-}
-
-.page-header {
-  &__logo-wrap {
-    width: $wrap-width;
-    height: $wrap-width/2;
-    margin: $wrap-width/4 auto 0;
-    text-align: center;
-  }
-
-  &__logo-link {
-    color: $color;
-    font-size: 28px;
-    font-weight: bold;
-  }
-}
+@import "components/benefit";
+@import "components/btn-closer";
+@import "components/intro";
+@import "components/jumbo";
+@import "components/logo";
+@import "components/main-menu";
+@import "components/menu-burger";
+@import "components/page-footer";
+@import "components/page-header";
+@import "components/photo-breaker";
+@import "components/promo";
+@import "components/reason";
+@import "components/social-links";
+@import "components/sprites";
+@import "components/form-header";
+@import "components/form-group";
+@import "components/num-picker";
+@import "components/traveller-info";
+@import "components/previews";
+@import "components/popup";
+@import "components/blog-intro";
+@import "components/post-preview";
+@import "components/post-data";
+@import "components/pagination";
+@import "components/btn";
+@import "components/post-summary";
+@import "components/post-body";
+@import "components/bullet-list";
+@import "components/quote";
+@import "components/post-nav";

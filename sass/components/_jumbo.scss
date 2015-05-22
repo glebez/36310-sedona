@@ -1,0 +1,51 @@
+.jumbo {
+  padding: 45px 20px;
+  text-align: center;
+  background-image: url('../img/bg-triangle-edge-1.png'), url('../img/bg-jumbo-lg.jpg');
+  background-position: 50% 100%, 50% 0;
+  background-repeat: no-repeat, no-repeat;
+
+  &__pre-title {
+    display: block;
+    height: 66px;
+    margin-bottom: 60px;
+    background-image: url('../img/bg-welcome.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: -9999px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 70px;
+    height: 48px;
+    background-image: url('../img/bg-sedona.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: -9999px;
+
+    &--small {
+      height: 30px;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      background-image: url('../img/bg-sedona-sm.png');
+    }
+  }
+
+  &__quote {
+    display: block;
+    height: 54px;
+    background-image: url('../img/bg-quote.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: -9999px;
+  }
+
+  &--folded {
+    background-image: url('../img/bg-triangle-edge-1.png'), url('../img/bg-jumbo-folded.jpg');
+    background-position: 50% 100%, 50% 100%;
+    background-repeat: no-repeat, no-repeat;
+
+  }
+
+}

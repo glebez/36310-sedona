@@ -1,0 +1,16 @@
+.promo {
+  padding: 30px 20px 50px;
+  background-color: $bg-color;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__title {
+    margin-bottom: 25px;
+    @include title(21, 26);
+  }
+  &__text {
+    margin-bottom: 35px;
+    @include font-size(1.4);
+    line-height: (24 / 14);
+  }
+}

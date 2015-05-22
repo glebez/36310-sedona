@@ -1,0 +1,47 @@
+.reason {
+  padding: 40px 20px 50px;
+  background-color: $bg-color-contrast;
+  color: $text-color-contrast;
+  text-align: center;
+  text-transform: uppercase;
+  &__content-wrap {
+    padding: 33px 20px;
+    border-bottom: 1px solid $border-muted;
+  }
+  &__title {
+    margin-bottom: 15px;
+    @include title();
+  }
+  &__num{
+    margin-bottom: 25px;
+    @include font-size(1.4);
+    &:before, &:after {
+      content: '\2014';
+      padding: 0 5px;
+    }
+  }
+  &__text {
+    @include font-size(1.4);
+    line-height: (21 / 14);
+  }
+
+  &--dark {
+    padding: 0 20px;
+    background-color: $bg-color-muted;
+    color: $text-color;
+  }
+
+  &--arrow-top {
+    padding-top: 60px;
+    background-image: url(../img/bg-triangle-edge-2.png);
+    background-position: 50% -20px;
+    background-repeat: no-repeat;
+  }
+
+  &:last-child {
+    .reason__content-wrap {
+      border: none;
+    }
+  }
+
+}

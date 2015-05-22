@@ -1,0 +1,18 @@
+.quote {
+  margin-bottom: 40px;
+  padding-left: 17px;
+  border-left: 2px solid $bg-color-contrast;
+
+  &__body {
+    @include font-size(1.4);
+    line-height: (24 / 14);
+  }
+
+  &__author {
+    text-transform: none;
+    color: $text-color-highlited;
+    @include font-size(1.4);
+    line-height: (24 / 14);
+    font-style: italic;
+  }
+}

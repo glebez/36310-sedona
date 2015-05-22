@@ -1,0 +1,55 @@
+.num-picker {
+	margin-bottom: 20px;
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+
+	&__btn {
+		float: left;
+		width: 21%; // 60/280
+		height: 60px;
+		border: none;
+		background-color: $bg-color-muted;
+		text-indent: -9999px;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+
+		&--plus {
+			background-image: url('../img/plus.png');
+		}
+
+		&--minus {
+			background-image: url('../img/minus.png');
+		}
+	}
+
+	&__input-measure {
+		position: relative;
+		float: left;
+		width: 54%;
+		margin-right: 2%;
+		margin-left: 2%;
+		
+		&:after {
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			@include font-size(1.8);
+			margin-top: -9px;
+			color: rgba(0, 0, 0, .3);
+		}
+
+		&--people:after {
+			content: 'чел.';
+		}
+
+		&--days:after {
+			content: 'дн.';
+		}
+
+	}
+}

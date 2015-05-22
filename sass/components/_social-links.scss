@@ -1,0 +1,28 @@
+
+.social-links {
+  font-size: 0;
+  margin-bottom: 40px;
+
+  &__item {
+    display: inline-block;
+    width: 46px;
+    height: 48px;
+    margin-right: 5px;
+    background-color: $bg-color-contrast;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &--twi {
+      background-image: url('../img/twi.png');
+    }
+
+    &--fb {
+      background-image: url('../img/fb.png');
+    }
+
+    &--tube {
+      background-image: url('../img/tube.png');
+    }
+
+  }
+}

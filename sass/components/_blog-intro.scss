@@ -1,0 +1,21 @@
+.blog-intro {
+  padding: 50px 0 30px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid $border-lightly-muted; 
+
+	&__title {
+    margin-bottom: 35px;
+	  @include title(30, 26);
+	}
+
+  &__text {
+    @include font-size(1.4);
+    line-height: (26 / 14);
+  }
+
+  &--borderless {
+    border-bottom: none;
+  }
+
+}

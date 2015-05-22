@@ -1,0 +1,25 @@
+.post-nav {
+  padding: 45px 20px;
+  border-top: 2px solid $border-lightly-muted;
+  border-bottom: 2px solid $border-lightly-muted;
+
+  &__btn-row {
+    margin-bottom: 20px;
+
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+  }
+
+  &__btn-wrapper {
+    float: left;
+    width: 130/280 * 100%;
+
+    &:first-of-type {
+      margin-right: 20/280 * 100%;
+    }
+  }
+}

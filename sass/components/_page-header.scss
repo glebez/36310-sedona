@@ -1,0 +1,9 @@
+.page-header {
+  position: relative;
+  padding: 13px 16px;
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

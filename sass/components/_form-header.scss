@@ -1,0 +1,19 @@
+.form-header {
+  padding: 75px 20px 20px;
+  background-color: $bg-color;
+  border-bottom: 1px solid $border-muted;
+  text-align: center;
+  text-transform: uppercase;
+
+
+  &__title {
+  	margin-bottom: 30px;
+  	@include title();
+  }
+
+  &__text {
+  	@include font-size(1.4);
+  	line-height: (24 / 14);
+  }
+
+}

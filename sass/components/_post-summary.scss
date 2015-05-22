@@ -1,0 +1,16 @@
+.post-summary {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 30px;
+    @include title(24, 35);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+    @include font-size(1.8);
+    line-height: (26 / 18);
+    color: $text-color-highlited;
+  }
+}
