@@ -3,8 +3,13 @@
   font-size: $sizeValue + rem;
 }
 
-@mixin title($fontSize: 18, $lineHeight: 26) {
-  @include font-size($fontSize / 10);
-  line-height: ($lineHeight / $fontSize);
+@mixin title($fontSize-xs: 18, $lineHeight-xs: 26, $fontSize-sm: 21, $lineHeight-sm: 26) {
+  @include font-size($fontSize-xs / 10);
+  line-height: ($lineHeight-xs / $fontSize-xs);
   font-weight: 700;
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    @include font-size($fontSize-sm / 10);
+    line-height: ($lineHeight-sm / $fontSize-sm);
+  }
 }

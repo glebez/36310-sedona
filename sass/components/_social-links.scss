@@ -9,20 +9,37 @@
     height: 48px;
     margin-right: 5px;
     background-color: $bg-color-contrast;
+
+    &:hover {
+      background-color: $bg-btn-hover;
+    }
+
+    &:active {
+      //TODO refactor the element wrappers so the active selector works
+      background-color: $bg-btn-active;
+    }
+  }
+
+  &__link {
+    height: 100%;
+    display: block;
     background-position: center center;
     background-repeat: no-repeat;
 
     &--twi {
-      background-image: url('../img/twi.png');
+      background-image: url('../img/icon-twitter.svg');
     }
 
     &--fb {
-      background-image: url('../img/fb.png');
+      background-image: url('../img/icon-facebook.svg');
     }
 
     &--tube {
-      background-image: url('../img/tube.png');
+      background-image: url('../img/icon-youtube.svg');
     }
+  }
 
+  @media screen and (min-width: ($tablet-width - 1)) {
+    margin-bottom: 0;
   }
 }

@@ -4,7 +4,7 @@
 
 	&__title {
 		margin-bottom: 30px;
-		@include title();
+		@include title;
 		text-align: center;
 		text-transform: uppercase;
 
@@ -34,7 +34,7 @@
 		&--radio {
 			margin-bottom: 15px;
 			padding-left: 0; 
-			@include title();
+			@include title;
 			text-transform: none;
 
 			&:before {
@@ -55,7 +55,7 @@
 		&--checkbox {
 			margin-bottom: 25px;
 			padding-left: 0; 
-			@include title();
+			@include title;
 			text-transform: none;
 
 			&:before {
@@ -81,7 +81,7 @@
 		padding: 20px 20px;
 		border: none;
 		background-color: $bg-color-muted;
-		@include title();
+		@include title;
 		font-family: $base-font-family;
 
 		&--bordered {

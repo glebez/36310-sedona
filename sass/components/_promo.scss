@@ -6,11 +6,34 @@
 
   &__title {
     margin-bottom: 25px;
-    @include title(21, 26);
+    @include title(21, 26, 30, 26);
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-bottom: 30px;
+    }
   }
+
   &__text {
     margin-bottom: 35px;
     @include font-size(1.4);
     line-height: (24 / 14);
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-bottom: 44px;
+    }
+
   }
+
+  &__inner {
+    @media screen and (min-width: ($tablet-width - 1)) {
+      max-width: 460px;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    padding: 50px 20px 60px;
+  }
+
+  
 }
