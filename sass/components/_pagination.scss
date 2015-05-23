@@ -4,6 +4,34 @@
   border-top: 2px solid $border-lightly-muted;
   border-bottom: 2px solid $border-lightly-muted;
 
+  @media screen and (min-width: ($tablet-width - 1)) {
+    //max-width: 678px;
+    //margin: 0 auto;
+    padding: 45px 45px 0;
+    border: none;
+  }
+
+  &__label {
+    display: none;
+    @include font-size(2.1);
+    line-height: (26 / 21);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      display: block;
+      float: left;
+      padding: 20px 70px 0 0;
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: ($tablet-width - 1)) {
+      display: inline-block;
+    }
+
+  }
+
   &__btn {
     float: left;
     width: 56px;
@@ -19,6 +47,11 @@
       background-color: $border-muted;
       color: $text-color;
     }
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-right: 8px;
+    }
+
   }
 
   &__link {

@@ -35,6 +35,10 @@ body {
 .blog-wrapper,
 .post-wrapper {
   margin: 0 20px;
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    margin: 0 45px;
+  }
 }
 
 .form-wrapper {
@@ -57,7 +61,7 @@ body {
 
 .visible-sm-inline {
   display: none;
-  
+
   @media screen and (min-width: ($tablet-width - 1)) {
     display: inline;
   }
