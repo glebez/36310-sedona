@@ -4,7 +4,13 @@
   text-transform: uppercase;
 
   @media screen and (min-width: ($tablet-width - 1)) {
-    padding: 70px 115px 50px;
+    padding: 70px 0 50px;
+  }
+
+  &__content {
+    max-width: 415px;
+    margin: 0 auto;
+
   }
 
 
@@ -16,10 +22,6 @@
   &__text {
     @include font-size(1.4);
     line-height: (26 / 14);
-  }
-
-  &--borderless {
-    border-bottom: none;
   }
 
 }

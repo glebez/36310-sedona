@@ -1,5 +1,14 @@
 .post-data {
 
+  &--side-strikes {
+    @media screen and (min-width: ($tablet-width - 1)) {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 0 20px;
+      background-color: $bg-color;
+    }
+  }
+
   &__timestamp,
   &__tags {
     float: left;
@@ -28,7 +37,25 @@
   }
 
   &__wrapper {
+    position: relative;
     margin-top: 25px;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-top: 40px;
+      margin-bottom:  -5px;
+    }
+
+    &:before {
+      @media screen and (min-width: ($tablet-width - 1)) {
+        display: block;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        content: '';
+        border-top: 2px solid $border-lightly-muted;
+      }
+    }
 
   }
 

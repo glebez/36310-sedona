@@ -1,6 +1,10 @@
 .bullet-list {
   margin-bottom: 35px;
 
+  @media screen and (min-width: ($tablet-width - 1)) {
+    margin-bottom: 25px;
+  }
+
   &__item {
     position: relative;
     padding-left: 15px;

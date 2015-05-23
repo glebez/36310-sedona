@@ -3,6 +3,11 @@
   padding-left: 17px;
   border-left: 2px solid $bg-color-contrast;
 
+  @media screen and (min-width: ($tablet-width - 1)) {
+    max-width: 490px;
+    padding-left: 30px;
+  }
+
   &__body {
     @include font-size(1.4);
     line-height: (24 / 14);

@@ -13,25 +13,26 @@
 
   <header class="page-header">
     <nav class="main-menu">
-      <div class="btn-closer">
-        <span class="btn-closer__bar"></span>
-        <span class="btn-closer__bar"></span>
+      <div class="main-menu__i-cross-wrapper">
+        <a href="#"><img class="main-menu__i-cross" src="img/icon-cross.svg" alt=""></a>
+        
       </div>
       <ul class="main-menu__list">
         <li class="main-menu__item"><a class="main-menu__link" href="">Карта Штата</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="">Информация</a></li>
-        <li class="main-menu__item main-menu__collapsed">
+        <li class="main-menu__item  main-menu__collapsed">
           <div class="logo__wrapper">
             <div class="logo">
-              <a class="logo__link" href="#"></a>
+              <a href="#">
+                <img class="logo__img" src="img/logo-sedona@1x.png" 
+                srcset="img/logo-sedona@2x.png 2x, 
+                img/logo-sedona@3x.png 3x" 
+                alt="Sedona logo" width="67" height="56">
+              </a>
             </div>
           </div>
-          <div class="menu-burger__wrapper">
-            <div class="menu-burger">
-              <span class="menu-burger__bar"></span>
-              <span class="menu-burger__bar"></span>
-              <span class="menu-burger__bar"></span>
-            </div>
+          <div class="main-menu__i-burger-wrapper">
+            <a href="#"><img class="main-menu__i-burger" src="img/icon-menu.svg" alt=""></a>
           </div>
         </li>
         <li class="main-menu__item"><a class="main-menu__link" href="">Фото и видео</a></li>
@@ -46,19 +47,21 @@
   </div>
   <main>
     <div class="post-wrapper">
-      <header class="blog-intro  blog-intro--borderless">
-        <h2 class="blog-intro__title">Блог Шерифа</h2>
-        <p class="blog-intro__text">Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
+      <header class="blog-intro">
+        <div class="blog-intro__content">
+          <h2 class="blog-intro__title">Блог Шерифа</h2>
+          <p class="blog-intro__text">Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
+        </div>
         <div class="post-data__wrapper">
-          <div class="post-data">
+          <div class="post-data  post-data--side-strikes">
             <p class="post-data__timestamp">Позавчера</p>
             <p class="post-data__tags post-data__tags--float-right">Происшествия</p>
           </div>
         </div>
       </header>
-          <div class="post-summary">
-            <h3 class="post-summary__title">Внимание! Cбежала моя домашняя анаконда</h3>
-            <p class="post-summary__text">Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
+      <div class="post-summary">
+        <h3 class="post-summary__title">Внимание! Cбежала моя домашняя анаконда</h3>
+        <p class="post-summary__text">Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
       </div>
       <div class="post-body">
         <h4 class="post-body__title">Предыстория</h4>
@@ -82,25 +85,36 @@
   		
 
   	<div class="post-nav">
-  		<div class="post-nav__btn-row">
-        <div class="post-nav__btn-wrapper">
-          <a class="btn btn--ghost" href="">Пред.</a>
+  		<div class="post-nav__inner">
+        <div class="post-nav__col-2-xs  post-nav__col-3-sm">
+          <a class="btn btn--ghost" href="">Пред. <span class="hidden-xs">Пост</span></a>
         </div>
-        <div class="post-nav__btn-wrapper">
-          <a class="btn btn--ghost" href="">След.</a>
+        <div class="post-nav__col-2-xs  post-nav__col-3-sm  post-nav__col-3-sm--fr">
+          <a class="btn btn--ghost" href="">След. <span class="hidden-xs">Пост</span></a>
+        </div>
+    		<div class="post-nav__col-1-xs  post-nav__col-3-sm">
+          <a class="btn btn--ghost" href="">Назад к списку</a>
         </div>
       </div>
-  		<a class="btn btn--ghost" href="">Назад к списку</a>
   	</div>
   </main>
+
+
   <footer class="page-footer">
     <h2 class="page-footer__title">&#35;VISITSEDONA</h3>
     <ul class="social-links">
-      <li class="social-links__item  social-links__item--twi"></li>
-      <li class="social-links__item  social-links__item--fb"></li>
-      <li class="social-links__item  social-links__item--tube"></li>
+      <li class="social-links__item">
+        <a class="social-links__link  social-links__link--twi" href=""></a></li>
+      <li class="social-links__item  social-links__item">
+        <a class="social-links__link  social-links__link--fb" href=""></a></li>
+      <li class="social-links__item">
+        <a class="social-links__link social-links__link--tube" href=""></a></li>
     </ul>
-    <p class="testimonial">Разработано <span class="sprites sprites--htmlacademy-logo"></span></p>
+    <p class="page-footer__testimonial">Разработано <a href="">
+       <svg class="page-footer__htmlacademylogo" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+        <path class="logo" d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+      </svg> 
+    </a></p>
   </footer>
 
   <!-- <script src="js/script.js"></script> -->
