@@ -1,10 +1,15 @@
 .popup {
+	display: none;
 	position: absolute;
 	padding: 45px 45px 35px;
 	box-shadow: 0 7px 15px rgba(0, 1, 1, .15);
 	text-align: center;
 	text-transform: uppercase;
 	background-color: $bg-color;
+
+	@media screen and (min-width: ($tablet-width - 1)) {
+		display: none;
+	}
 
 	&__title {
 		margin-bottom: 30px;
@@ -13,8 +18,8 @@
 
 	&__text {
 		margin-bottom: 25px;
-	    @include font-size(1.4);
-	    line-height: (26 / 14);
+    @include font-size(1.4);
+    line-height: (26 / 14);
 	}
 
 	&__btn-wrapper {

@@ -3,13 +3,13 @@
   font-size: $sizeValue + rem;
 }
 
-@mixin title($fontSize-xs: 18, $lineHeight-xs: 26, $fontSize-sm: 21, $lineHeight-sm: 26) {
-  @include font-size($fontSize-xs / 10);
-  line-height: ($lineHeight-xs / $fontSize-xs);
+@mixin title($font-size-xs: 18, $line-height-xs: 26, $font-size-sm: 21, $line-height-sm: 26) {
+  @include font-size($font-size-xs / 10);
+  line-height: ($line-height-xs / $font-size-xs);
   font-weight: 700;
 
   @media screen and (min-width: ($tablet-width - 1)) {
-    @include font-size($fontSize-sm / 10);
-    line-height: ($lineHeight-sm / $fontSize-sm);
+    @include font-size($font-size-sm / 10);
+    line-height: ($line-height-sm / $font-size-sm);
   }
 }

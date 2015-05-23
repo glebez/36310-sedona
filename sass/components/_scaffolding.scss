@@ -8,6 +8,17 @@ body {
   background-color: $bg-color;
 }
 
+.important {
+  color: #ff0000;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
 
 .map {
   width: 100%;
@@ -26,8 +37,28 @@ body {
   margin: 0 20px;
 }
 
+.form-wrapper {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  @media screen and (min-width: ($tablet-width - 1)) {
+    padding-right: 58px;
+    padding-left: 58px;
+  }
+
+}
+
+
 .visible-xs {
   @media screen and (min-width: ($tablet-width - 1)) {
     display: none;
+  }
+}
+
+.visible-sm-inline {
+  display: none;
+  
+  @media screen and (min-width: ($tablet-width - 1)) {
+    display: inline;
   }
 }

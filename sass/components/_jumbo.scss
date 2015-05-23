@@ -68,6 +68,11 @@
       height: 30px;
       margin-top: 5px;
       margin-bottom: 35px;
+
+      @media screen and (min-width: ($tablet-width - 1)) {
+        height: 70px;
+        margin-bottom: 25px;
+      }
     }
 
 
@@ -88,7 +93,7 @@
   }
 
   &--folded {
-    background-image: url('../img/bg-triangle-edge-xs-1.png'), url('../img/bg-jumbo-xs-folded.jpg');
+    
     background-position: 50% 100%, 50% 100%;
     background-repeat: no-repeat, no-repeat;
 
