@@ -1,5 +1,4 @@
 .popup {
-	display: none;
 	position: absolute;
 	padding: 45px 45px 35px;
 	box-shadow: 0 7px 15px rgba(0, 1, 1, .15);
@@ -8,12 +7,12 @@
 	background-color: $bg-color;
 
 	@media screen and (min-width: ($tablet-width - 1)) {
-		display: none;
+		padding: 55px 60px 40px;
 	}
 
 	&__title {
 		margin-bottom: 30px;
-		@include title;
+		@include title($font-size-sm: 30, $line-height-sm: 40);
 	}
 
 	&__text {
@@ -26,14 +25,35 @@
 		margin: 0 -45px -35px;
 		padding: 20px 20px;
 		background-color: $bg-color-lightly-muted;
+		
+		@media screen and (min-width: ($tablet-width - 1)) {
+			margin: 0 -110px -40px;
+			padding: 40px 95px;
+		}
 
 	}
 
 	&--error {
 		bottom: 600px;
+		@media screen and (min-width: ($tablet-width - 1)) {
+			bottom: 620px;
+			width: 400px;
+			left: 50%;
+			margin-left: -200px;
+		}
 	}
+
 
 	&--success {
 		bottom: 230px;
+		@media screen and (min-width: ($tablet-width - 1)) {
+			width: 640px;
+			bottom: 160px;
+			left: 50%;
+			margin-left: -320px;
+			padding-left: 110px;
+			padding-right: 110px;
+
+		}
 	}
 }
