@@ -4,38 +4,44 @@
   margin-bottom: 40px;
 
   &__item {
-    display: inline-block;
+    display: block;
+    float: left;
     width: 46px;
     height: 48px;
     margin-right: 5px;
     background-color: $bg-color-contrast;
 
     &:hover {
-      background-color: $bg-btn-hover;
-    }
-
-    &:active {
-      //TODO refactor the element wrappers so the active selector works
-      background-color: $bg-btn-active;
+      background-color: $bg-btn--hover;
     }
   }
 
   &__link {
-    height: 100%;
     display: block;
-    background-position: center center;
-    background-repeat: no-repeat;
+    color: $text-color-contrast;
+    line-height: 48px;
+
+    &:active {
+      background-color: $bg-btn--pushdown;
+      color: $text-btn--pushdown;
+    }
+
+    // background-position: center center;
+    // background-repeat: no-repeat;
 
     &--twi {
-      background-image: url('../img/icon-twitter.svg');
+      font-size: 16px;
+      
     }
 
     &--fb {
-      background-image: url('../img/icon-facebook.svg');
+      font-size: 18px;
+      
     }
 
     &--tube {
-      background-image: url('../img/icon-youtube.svg');
+      font-size: 14px;
+      
     }
   }
 

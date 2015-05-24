@@ -12,9 +12,23 @@
   @include font-size(2.1);
   line-height: (26 / 21);
 
-  &--disabled {
+  &:hover,
+  &:focus {
+    background-color: $bg-btn--hover;
+  }
+
+  &:active {
+    background-color: $bg-btn--pushdown;
+    color: $text-btn--pushdown;
+  }
+
+  &--muted {
     background-color: $bg-color-lightly-muted;
     color: $text-color-muted;
+  }
+
+  &--disabled {
+    background-color: $bg-btn--disabled;
   }
 
   &--short {

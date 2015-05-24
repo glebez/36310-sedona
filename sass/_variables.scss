@@ -3,8 +3,10 @@ $bg-color-contrast: #81b3d2;
 $bg-color-muted: #eee;
 $bg-color-lightly-muted: #f2f2f2;
 
-$bg-btn-hover: #669ec0;
-$bg-btn-active: #5496bd;
+$bg-btn--hover: #669ec0;
+$bg-btn--pushdown: #5496bd;
+$bg-btn--disabled: #e5e5e5;
+$text-btn--pushdown: rgba(#fff, .3);
 
 $border: #b8b8b8;
 $border-muted: #e5e5e5;
@@ -19,8 +21,13 @@ $text-color-highlited: #766357;
 
 $wrap-width: 300px;
 $tablet-width: 768px;
+$desktop-width: 1280px;
 
-$icon-color-active: rgba(0, 0, 0, .3);
+$link-color--pushdown: rgba(0, 0, 0, .3);
+
+$link-color-active: #766357;
+$link-color-active--hover: #604e43;
+$link-color-active--pushdown: rgba($link-color-active, .3);
 
 
 $base-font-family: 'PT Sans', sans-serif;

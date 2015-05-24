@@ -1,15 +1,18 @@
 .jumbo {
   padding: 45px 20px;
   text-align: center;
-  background-image: url('../img/intro-triangle.svg'), url('../img/bg-jumbo-xs-full.jpg');
+  background-image: url('../img/intro-triangle.svg'), url('../img/photo-background@1x.jpg');
   background-position: 50% 100%, 50% 0;
   background-repeat: no-repeat, no-repeat;
   background-size: 200%, cover;
 
   @media screen and (min-width: ($tablet-width - 1)) {
     padding: 75px 50px 85px;
-    background-image: url('../img/intro-triangle.svg'), url('../img/bg-jumbo-sm-full.jpg');
     background-size: 105%, cover;
+  }
+
+  @media screen and (min-resolution: 1.5 dppx) {
+    background-image: url('../img/intro-triangle.svg'), url('../img/photo-background@2x.jpg');
   }
 
 
