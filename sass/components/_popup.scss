@@ -5,9 +5,13 @@
 	text-align: center;
 	text-transform: uppercase;
 	background-color: $bg-color;
+	z-index: 100;
 
 	@media screen and (min-width: ($tablet-width - 1)) {
 		padding: 55px 60px 40px;
+	}
+
+	@media screen and (min-width: ($desktop-width - 1)) {
 	}
 
 	&__title {

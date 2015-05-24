@@ -12,6 +12,11 @@
 		padding-left: 30px;
 	}
 
+	@media screen and (min-width: ($desktop-width - 1)) {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
 
 	&__thumbnail {
 		position: relative;
@@ -57,7 +62,24 @@
 		margin-top: -15px;
 		margin-left: -15px;
 		border-radius: 50%;
-		background-color: $bg-color-lightly-muted;
+		background-color: $input-bg;
+
+		&:hover,
+		&:focus {
+			background-color: $input-bg--hover;
+
+			span {
+				background-color: $btn-muted-text--hover;
+			}
+		}
+
+		&:active {
+			background-color: $input-bg--pushdown;
+
+			span {
+				background-color: $btn-muted-text--pushdown;
+			}
+		}
 
 		@media screen and (min-width: ($tablet-width - 1)) {
 			width: 60px;
@@ -74,7 +96,7 @@
 		    left: 9px;
 		    width: 13px;
 		    height: 1px;
-		    background-color: $border;
+		    background-color: $btn-muted-text;
 		    &:first-child {
 		      transform: rotate(-45deg);
 		    }

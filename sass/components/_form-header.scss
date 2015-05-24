@@ -10,6 +10,10 @@
     border-bottom: none;
   }
 
+  @media screen and (min-width: ($desktop-width - 1)) {
+    padding: 100px 250px 50px;
+  }
+
 
   &__title {
   	margin-bottom: 30px;

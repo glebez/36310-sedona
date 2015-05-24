@@ -13,23 +13,31 @@
 		width: 21%; // 60/280
 		height: 60px;
 		border: none;
-		background-color: $bg-color-muted;
-		text-indent: -9999px;
+		background-color: $input-bg;
+		//text-indent: -9999px;
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
+		font-size: 0;
+		color: $btn-muted-text;
 
-		@media screen and (min-width: ($tablet-width - 1)) {
-			width: 33.3333%
+		@media screen and (min-width: ($tablet-width - 1)) and (max-width: ($desktop-width - 1)) {
+			width: 33.3333%;
 		}
 
-		&--plus {
-			background-image: url('../img/icon-plus.svg');
-			background-size: 35%;
+		@media screen and (min-width: ($desktop-width - 1)) {
+
 		}
 
-		&--minus {
-			background-image: url('../img/icon-minus.svg');
-			background-size: 70%;
+		&:hover,
+		&:focus {
+			outline: none;
+			background-color: $input-bg--hover;
+			color: $btn-muted-text--hover;
+		}
+
+		&:active {
+			background-color: $input-bg--pushdown;
+			color: $btn-muted-text--pushdown;
 		}
 	}
 
@@ -40,9 +48,9 @@
 		margin-right: 2%;
 		margin-left: 2%;
 
-		@media screen and (min-width: ($tablet-width - 1)) {
+		@media screen and (min-width: ($tablet-width - 1)) and (max-width: ($desktop-width - 1)) {
 			margin: 0;
-			width: 33.3333%
+			width: 33.3333%;
 		}
 		
 		&:after {
@@ -53,8 +61,12 @@
 			margin-top: -9px;
 			color: rgba(0, 0, 0, .3);
 
-			@media screen and (min-width: ($tablet-width - 1)) {
+			@media screen and (min-width: ($tablet-width - 1)) and (max-width: ($desktop-width - 1)) {
 				display: none;
+			}
+
+			@media screen and (min-width: ($desktop-width - 1)) {
+				right: 20px;
 			}
 		}
 

@@ -13,6 +13,11 @@
 			margin-right: 0.77%; // 5 / 650 * 100%;
 		}
 
+		@media screen and (min-width: ($desktop-width - 1)) {
+			width: 6.25%; // 60 / 960 * 100%
+			margin-right: 0.63% // 6 / 960 * 100%;
+		}
+
 	}
 
 	&__num {
@@ -30,18 +35,26 @@
 
 		@media screen and (min-width: ($tablet-width - 1)) {
 			width: 90%;
+			margin: 0 -3px;
+		}
+
+		@media screen and (min-width: ($tablet-width - 1)) {
+			width: 98.96%;
+			margin: 0 -30px;
 		}
 	}
 
 	&__column-3 {
-		@media screen and (min-width: ($tablet-width - 1)) {
-			float: left;
-			width: 32.76%; // 190/580 * 100%
-			margin-right: 0.86%;  // 5/580 * 100%
+		float: left;
 
-			&:last-child {
-				margin-right: auto;
-			}
+		@media screen and (min-width: ($tablet-width - 1)) {
+			width: 33.333%;
+			padding: 0 3px;
+		}
+
+		@media screen and (min-width: ($desktop-width - 1)) {
+			padding: 0 30px;
+
 		}
 	}
 

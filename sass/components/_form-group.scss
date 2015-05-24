@@ -9,10 +9,12 @@
 
 
 	&__title {
+		position: relative;
 		margin-bottom: 30px;
 		@include title;
 		text-align: center;
 		text-transform: uppercase;
+		z-index: 10;
 
 		@media screen and (min-width: ($tablet-width - 1)) {
 			width: 400px;
@@ -32,7 +34,6 @@
 			@media screen and (min-width: ($tablet-width - 1)) {
 				display: block;
 				width: 100%;
-				z-index: -1;
 		    position: absolute;
 		    top: 50%;
 		    content: '';
@@ -56,7 +57,8 @@
 		}
 
 		&--centered-sm {
-			@media screen and (min-width: ($tablet-width - 1)) {
+			@media screen and (min-width: ($tablet-width - 1)) and (max-width: ($desktop-width - 1)) {
+				margin: 0 -30px 10px;
 				padding-left: 0;
 				text-align: center;
 			}
@@ -85,8 +87,33 @@
 				vertical-align: middle;
 				content: url('../img/radio.png');
 
+				
+
 				input:checked + & {
+
 					content: url('../img/radio-checked.png');
+
+				}
+			}
+
+			&:hover,
+			&:focus {
+				&:before {
+					content: url('../img/radio--hover.png');
+
+					input:checked + & {
+						content: url('../img/radio-checked--hover.png');
+					}
+				}
+			}
+
+			&:active {
+				&:before {
+					content: url('../img/radio--pushdown.png');
+
+					input:checked + & {
+						content: url('../img/radio-checked--pushdown.png');
+					}
 				}
 			}
 
@@ -119,6 +146,38 @@
 				}
 			}
 
+			&:hover,
+			&:focus {
+				&:before {
+					content: url('../img/checkbox--hover.png');
+
+					input:checked + & {
+						content: url('../img/checkbox-checked--hover.png');
+					}
+				}
+			}
+
+			&:active {
+				&:before {
+					content: url('../img/checkbox--pushdown.png');
+
+					input:checked + & {
+						content: url('../img/checkbox-checked--pushdown.png');
+					}
+				}
+			}
+
+			@media screen and (min-width: ($tablet-width - 1)) {
+				min-width: 210px;
+
+				&:first-of-type {
+					order: -2;
+				}
+
+				&:nth-of-type(3) {
+					order: -1;
+				}
+			}
 		}
 	}
 
@@ -128,7 +187,7 @@
 		margin-bottom: 20px;
 		padding: 20px 20px;
 		border: none;
-		background-color: $bg-color-muted;
+		background-color: $input-bg;
 		@include font-size(1.8);
 		line-height: (18/26);
 		font-weight: 700;
@@ -138,18 +197,26 @@
 			margin-bottom: 25px;
 		}
 
+		&:hover {
+			background-color: $input-bg--hover;
+		}
+
+		&:focus,
+		&:active {
+			//outline: none;
+			background-color: $bg-color;
+			outline: 4px solid $border-muted;
+		}
+
 		&--bordered {
 			border: 2px solid $border;
 		}
 
 		&--num-picker {
 			margin-bottom: 0;
-			
-			@media screen and (max-width: ($tablet-width - 1)) {
-				padding-right: 55px;
-			}
+			padding-right: 55px;
 
-			@media screen and (min-width: ($tablet-width - 1)) {
+			@media screen and (min-width: ($tablet-width - 1)) and (max-width: ($desktop-width - 1)) {
 				padding-right: 10px;
 				padding-left: 10px;
 				text-align: center;
@@ -163,13 +230,21 @@
 	}
 
 	&__checkbox-group {
-		@media screen and (min-width: ($tablet-width - 1)) {
-			display: inline-block;
-			padding: 15px 40px 0 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
-			&--fr {
-				float: right;
-			}
+		@media screen and (min-width: ($tablet-width - 1)) {
+			width: 470px;
+			margin: 0 auto;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+		}
+
+		@media screen and (min-width: ($desktop-width - 1)) {
+			width: auto;
+			padding-top: 15px;
 		}
 
 	}
@@ -179,6 +254,21 @@
 	&--borderless {
 		border: none;
 		margin-bottom: 75px;
+		@media screen and (min-width: ($tablet-width - 1)) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__row {
+		@media screen and (min-width: ($tablet-width - 1)) {
+			margin: 0 -30px;
+
+			&:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+		}
 	}
 
 	&__column-2 {
@@ -197,16 +287,13 @@
 	&__column-3 {
 		@media screen and (min-width: ($tablet-width - 1)) {
 			float: left;
-			width: 27%;
-			margin-right: 9.5%;
-
-			&:last-child {
-				margin-right: auto;
-			}
+			width: 33.333%;
+			margin: 0 auto;
+			padding: 0 30px;
 		}
 
 		&--solo {
-			@media screen and (min-width: ($tablet-width - 1)) {
+			@media screen and (min-width: ($tablet-width - 1)) and (max-width: ($desktop-width - 1)) {
 				float: none;
 				margin: 0 auto;
 			}
@@ -217,7 +304,18 @@
 		
 			max-width: 460px;
 			margin: 0 auto 40px;
+	}
 
+	&__radio-wrapper {
+		@media screen and (min-width: ($tablet-width - 1)) {
+			max-width: 625px;
+			margin: 0 auto;
+		}
+
+	}
+
+	&__drag-area {
+		margin: 60px auto 55px;
 	}
 
 	&:after {

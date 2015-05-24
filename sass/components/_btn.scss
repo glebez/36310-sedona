@@ -23,8 +23,19 @@
   }
 
   &--muted {
-    background-color: $bg-color-lightly-muted;
-    color: $text-color-muted;
+    background-color: $input-bg;
+    color: $btn-muted-text;
+
+    &:hover,
+    &:focus {
+      background-color: $input-bg--hover;
+      color: $btn-muted-text--hover;
+    }
+
+    &:active {
+      background-color: $input-bg--pushdown;
+      color: $btn-muted-text--pushdown;
+    }
   }
 
   &--disabled {

@@ -64,15 +64,23 @@ body {
   @media screen and (min-width: ($tablet-width - 1)) {
     margin: 0 45px;
   }
+
+  
 }
 
 .form-wrapper {
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
+
   @media screen and (min-width: ($tablet-width - 1)) {
     padding-right: 58px;
     padding-left: 58px;
+  }
+
+  @media screen and (min-width: ($desktop-width - 1)) {
+    padding-right: 120px;
+    padding-left: 120px;
   }
 
 }
@@ -81,6 +89,13 @@ body {
 .visible-xs {
   @media screen and (min-width: ($tablet-width - 1)) {
     display: none;
+  }
+}
+
+.visible-md {
+  display: none !important;
+  @media screen and (min-width: ($desktop-width - 1)) {
+    display: initial;
   }
 }
 
@@ -94,6 +109,12 @@ body {
 
 .hidden-xs {
   @media screen and (max-width: ($tablet-width - 1)) {
+    display: none;
+  }
+}
+
+.hidden-md {
+  @media screen and (min-width: ($desktop-width - 1)) {
     display: none;
   }
 }
@@ -136,9 +157,11 @@ body {
 }
 .icon-minus:before {
   content: "\e602";
+  font-size: 4px;
 }
 .icon-plus:before {
   content: "\e603";
+  font-size: 20px;
 }
 .icon-twitter:before {
   content: "\e604";
