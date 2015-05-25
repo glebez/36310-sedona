@@ -10,6 +10,10 @@
     padding: 35px 40px 35px 60px;
   }
 
+  @media screen and (min-width: ($desktop-width - 1)) {
+    padding: 35px 45px;
+  }
+
 
   &__title {
     margin-bottom: 40px;
@@ -18,11 +22,19 @@
     @media screen and (min-width: ($tablet-width - 1)) {
       margin-bottom: 0;
     }
+
+    @media screen and (min-width: ($desktop-width - 1)) {
+      padding-left: 85px;
+    }
   }
 
   &__testimonial {
     @include font-size(1.4);
     line-height: (26 / 14);
+
+    @media screen and (min-width: ($desktop-width - 1)) {
+      padding-left: 95px;
+    }
   }
 
   &__htmlacademylogo {

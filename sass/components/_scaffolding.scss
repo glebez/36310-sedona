@@ -68,6 +68,10 @@ body {
     margin: 0 45px;
   }
 
+  @media screen and (min-width: ($tablet-width - 1)) {
+    margin: 0 53px;
+  }
+
   
 }
 

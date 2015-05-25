@@ -70,7 +70,7 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      styles: {
+      style: {
           files: ['sass/*.scss', 'sass/**/*.scss'],
           tasks: ['sass:style'],
           options: {
@@ -83,5 +83,5 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['lintspaces:test']);
 
   grunt.registerTask('default', ['sass:style', 'copy:gosha', 'clean:gosha']);
-  grunt.registerTask('watch', ['watch:styles']);
+  //grunt.registerTask('watch', ['watch:style']);
 };

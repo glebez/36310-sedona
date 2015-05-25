@@ -11,6 +11,10 @@
     border: none;
   }
 
+  @media screen and (min-width: ($desktop-width - 1)) {
+    padding: 45px 0 0;
+  }
+
   &__label {
     display: none;
     @include font-size(2.1);
@@ -23,12 +27,25 @@
       float: left;
       padding: 20px 70px 0 0;
     }
+
+    @media screen and (min-width: ($desktop-width - 1)) {
+      width: 33.33%;
+      padding-right: 45px;
+      padding-left: 45px;
+      text-align: center;
+    }
   }
 
   &__list {
     @media screen and (min-width: ($tablet-width - 1)) {
-      display: inline-block;
+      float: left;
     }
+
+    @media screen and (min-width: ($desktop-width - 1)) {
+      width: 33.33%;
+      padding: 0 39px;
+    }
+
 
   }
 
@@ -42,14 +59,35 @@
     color: $text-color-contrast;
     @include title;
     text-align: center;
+    
+    &:hover,
+    &:focus {
+      background-color: $bg-btn--hover;
+    }
 
-    &--active {
-      background-color: $border-muted;
-      color: $text-color;
+    &:active {
+      background-color: $bg-btn--pushdown;
+      color: $text-btn--pushdown;
     }
 
     @media screen and (min-width: ($tablet-width - 1)) {
       margin-right: 8px;
+    }
+
+    &--active {
+      background-color: $border-muted;
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        background-color: $input-bg--hover;
+      }
+
+      &:active {
+        background-color: $input-bg--pushdown;
+        color: $link-color--pushdown;
+
+      }
     }
 
   }
