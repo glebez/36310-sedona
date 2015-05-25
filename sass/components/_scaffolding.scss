@@ -9,11 +9,14 @@
   font-style: normal;
 }
 
-
 html {
   width: 100%;
   font-size: 10px;
   font-family: $base-font-family;
+}
+
+.bob {
+  display: inline-block;
 }
 
 body {
