@@ -1,0 +1,12 @@
+.wrapper-post {
+  margin: 0 20px;
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    margin: 0 45px;
+  }
+
+  @media screen and (min-width: ($desktop-width - 1)) {
+    margin: 0 200px;
+  }
+
+}

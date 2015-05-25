@@ -12,6 +12,10 @@
     @include font-size(1.4);
     line-height: (24 / 14);
 
+    @media screen and (min-width: ($tablet-width - 1)) {
+      padding-left: 35px;
+    }
+
     &:before {
       content: '';
       position: absolute;

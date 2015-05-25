@@ -1,0 +1,16 @@
+.wrapper-form {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    padding-right: 58px;
+    padding-left: 58px;
+  }
+
+  @media screen and (min-width: ($desktop-width - 1)) {
+    padding-right: 120px;
+    padding-left: 120px;
+  }
+
+}

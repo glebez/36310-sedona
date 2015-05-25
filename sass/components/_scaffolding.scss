@@ -15,10 +15,6 @@ html {
   font-family: $base-font-family;
 }
 
-.bob {
-  display: inline-block;
-}
-
 body {
   width: 100%;
   position: relative;
@@ -28,70 +24,6 @@ body {
 .important {
   color: #ff0000;
 }
-
-.clearfix {
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-
-.map {
-  width: 100%;
-  height: 350px;
-  background-image: url('../img/bg-map.jpg');
-  background-size: cover;
-  background-repeat: no-repeat; 
-
-  @media screen and (min-width: ($tablet-width - 1)) {
-    background-image: url('../img/bg-map-sm.jpg');
-  }
-
-  @media screen and (min-width: ($desktop-width - 1)) {
-    background-image: url('../img/bg-map-md.jpg');
-  }
-}
-
-.wrapper-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: $bg-color;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
-}
-
-.blog-wrapper,
-.post-wrapper {
-  margin: 0 20px;
-
-  @media screen and (min-width: ($tablet-width - 1)) {
-    margin: 0 45px;
-  }
-
-  @media screen and (min-width: ($tablet-width - 1)) {
-    margin: 0 53px;
-  }
-
-  
-}
-
-.form-wrapper {
-  position: relative;
-  padding-right: 20px;
-  padding-left: 20px;
-
-  @media screen and (min-width: ($tablet-width - 1)) {
-    padding-right: 58px;
-    padding-left: 58px;
-  }
-
-  @media screen and (min-width: ($desktop-width - 1)) {
-    padding-right: 120px;
-    padding-left: 120px;
-  }
-
-}
-
 
 .visible-xs {
   @media screen and (min-width: ($tablet-width - 1)) {
@@ -126,53 +58,26 @@ body {
   }
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-htmlacademy {
-  margin-left: 7px;
-  vertical-align: middle;
-  font-size: 35px;
-  color: $text-color;
-
-  &:hover,
-  &:focus {
-    color: $bg-color-contrast;
-  }
-
-  &:active {
-    color: $link-color--pushdown;
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
   }
 }
 
-.icon-htmlacademy:before {
-  content: "\e600";
-}
-.icon-facebook:before {
-  content: "\e601";
-}
-.icon-minus:before {
-  content: "\e602";
-  font-size: 4px;
-}
-.icon-plus:before {
-  content: "\e603";
-  font-size: 20px;
-}
-.icon-twitter:before {
-  content: "\e604";
-}
-.icon-youtube:before {
-  content: "\e605";
+.map {
+  width: 100%;
+  height: 350px;
+  background-image: url('../img/bg-map.jpg');
+  background-size: cover;
+  background-repeat: no-repeat; 
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    background-image: url('../img/bg-map-sm.jpg');
+  }
+
+  @media screen and (min-width: ($desktop-width - 1)) {
+    background-image: url('../img/bg-map-md.jpg');
+  }
 }

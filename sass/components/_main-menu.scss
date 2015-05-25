@@ -135,6 +135,11 @@
       order: -1;
     }
 
+    &:hover,
+    &:focus {
+      background-color: $bg-color;
+    }
+
   }
 
   &__i-burger-wrapper {

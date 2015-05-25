@@ -3,6 +3,10 @@
 @import "mixins";
 @import "components/scaffolding";
 
+@import "components/wrapper-main";
+@import "components/wrapper-blog";
+@import "components/wrapper-post";
+@import "components/wrapper-form";
 @import "components/benefit";
 @import "components/intro";
 @import "components/jumbo";
@@ -30,3 +34,4 @@
 @import "components/bullet-list";
 @import "components/quote";
 @import "components/post-nav";
+@import "components/icon";

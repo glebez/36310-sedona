@@ -1,0 +1,52 @@
+.icon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--htmlacademy {
+  margin-left: 7px;
+  vertical-align: middle;
+  font-size: 35px;
+  color: $text-color;
+
+  &:hover,
+  &:focus {
+    color: $bg-color-contrast;
+  }
+
+  &:active {
+    color: $link-color--pushdown;
+  }
+
+  &:before {
+    content: "\e600";
+  }
+}
+
+
+.icon--facebook:before {
+  content: "\e601";
+}
+.icon--minus:before {
+  content: "\e602";
+  font-size: 4px;
+}
+.icon--plus:before {
+  content: "\e603";
+  font-size: 20px;
+}
+.icon--twitter:before {
+  content: "\e604";
+}
+.icon--youtube:before {
+  content: "\e605";
+}

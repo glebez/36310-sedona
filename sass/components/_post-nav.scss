@@ -8,6 +8,11 @@
     border: none;
   }
 
+  @media screen and (min-width: ($desktop-width - 1)) {
+    padding-right: 170px;
+    padding-left: 170px;
+  }
+
   &__inner {
     margin: 0 -10px;
 
@@ -39,30 +44,15 @@
     margin-bottom: 20px;
   }
 
-  &__col-3-sm {
+  &__col-3 {
     @media screen and (min-width: ($tablet-width - 1)) {
       width: 33.333%;
       margin-bottom: 0;
     }
+
+    @media screen and (min-width: ($desktop-width - 1)) {
+      padding: 0 40px;
+    }
+
   }
-
-  // &__btn-row {
-  //   margin-bottom: 20px;
-
-  //   &:after {
-  //     content: '';
-  //     display: table;
-  //     clear: both;
-  //   }
-
-  // }
-
-  // &__btn-wrapper {
-  //   float: left;
-  //   width: 130/280 * 100%;
-
-  //   &:first-of-type {
-  //     margin-right: 20/280 * 100%;
-  //   }
-  // }
 }

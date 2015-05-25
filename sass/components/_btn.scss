@@ -54,5 +54,16 @@
     background-color: $bg-color;
     border: 2px solid $bg-color-contrast;
     color: $text-color;
+
+    &:hover,
+    &:focus {
+      border: none;
+      color: $text-color-contrast;
+    }
+
+    &:active {
+      border: none;
+      color: $text-btn--pushdown;
+    }
   }
 }
