@@ -1,6 +1,16 @@
 .previews {
+	// display: flex;
+	// flex-wrap: wrap;
+	// justify-content: space-between;
+	margin-right: -35px;
 	padding-top: 20px;
 	padding-bottom: 50px;
+	
+	@media screen and (min-width: ($tablet-width - 1)) {
+		margin-right: -65px;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
 
 
 	&__thumbnail {
@@ -9,13 +19,33 @@
 		margin-top: 35px;
 		margin-right: 35px;
 
-		&:nth-child(3n) {
-			margin-right: 0;
+		@media screen and (min-width: ($tablet-width - 1)) {
+			margin-right: 65px;
 		}
 	}
 
 	&__img-wrap {
+		width: 70px;
 		font-size: 0;
+
+		@media screen and (min-width: ($tablet-width - 1)) {
+			width: 140px;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__filename {
+		display: none;
+
+		@media screen and (min-width: ($tablet-width - 1)) {
+			display: block;
+			margin-top: 18px;
+			@include font-size(1.4);
+	    line-height: (26 / 14);
+		}
 	}
 
 	&__closer {
@@ -28,6 +58,14 @@
 		margin-left: -15px;
 		border-radius: 50%;
 		background-color: $bg-color-lightly-muted;
+
+		@media screen and (min-width: ($tablet-width - 1)) {
+			width: 60px;
+			height: 60px;
+			left: 100%;
+			margin-top: -30px;
+			margin-left: -30px;
+		}
 
 		span {
 			display: block;
@@ -42,7 +80,13 @@
 		    }
 		    &:last-child {
 		      transform: rotate(45deg);
+		    }
 
+		    @media screen and (min-width: ($tablet-width - 1)) {
+		    	top: 30px;
+			    left: 17px;
+			    width: 27px;
+			    height: 2px;
 		    }
 
 		}

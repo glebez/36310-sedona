@@ -1,14 +1,23 @@
 .form-header {
-  padding: 75px 20px 20px;
+  padding: 75px 0 20px;
   background-color: $bg-color;
   border-bottom: 1px solid $border-muted;
   text-align: center;
   text-transform: uppercase;
 
+  @media screen and (min-width: ($tablet-width - 1)) {
+    padding: 65px 100px 50px;
+    border-bottom: none;
+  }
+
 
   &__title {
   	margin-bottom: 30px;
-  	@include title();
+  	@include title($font-size-sm: 30);
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-bottom: 25px;
+    }
   }
 
   &__text {

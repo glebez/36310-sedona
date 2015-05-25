@@ -4,28 +4,107 @@
   color: $text-color-contrast;
   @include font-size(1.8);
 
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    background-color: $bg-color;
+    color: $text-color;
+    @include font-size(1.4);
+  }
+
+
+
+
   &__list {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 0 0;
     list-style-type: none;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
   }
 
+
   &__item {
+    flex: 1 0 auto;
     box-shadow: 0 -1px 0 0 rgba($text-color, .2);
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      flex: 0 0 20%;
+    }
+
+    &:nth-child(2) {
+      @media screen and (min-width: ($tablet-width - 1)) {
+        order: -3;
+      }
+    }
+
+    &:nth-child(4) {
+      @media screen and (min-width: ($tablet-width - 1)) {
+        order: -2;
+      }
+    }
+
   }
+
 
   &__link {
     display: block;
-    padding: 20px 35px;
+    padding: 20px;
     box-shadow: inset 0 1px 0 0 rgba($text-color-contrast, .2);
     color: inherit;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+
     &:hover,
     &:focus {
       color: inherit;
     }
+
   }
+
+
+  &__i-cross-wrapper {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      display: none;
+    }
+
+  }
+
+
+  &__collapsed {
+    display: flex;
+    background-color: $bg-color;
+    flex: 2 0 auto;
+    order: 99;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      flex: 0 0 20%;
+      order: -1;
+    }
+
+  }
+
+  &__i-burger-wrapper {
+    text-align: right;
+    padding: 17px 20px 0 0;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      display: none;
+    }
+
+  }
+
+  
 }

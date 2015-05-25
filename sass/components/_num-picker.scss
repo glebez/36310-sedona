@@ -18,12 +18,18 @@
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 
+		@media screen and (min-width: ($tablet-width - 1)) {
+			width: 33.3333%
+		}
+
 		&--plus {
-			background-image: url('../img/plus.png');
+			background-image: url('../img/icon-plus.svg');
+			background-size: 35%;
 		}
 
 		&--minus {
-			background-image: url('../img/minus.png');
+			background-image: url('../img/icon-minus.svg');
+			background-size: 70%;
 		}
 	}
 
@@ -33,6 +39,11 @@
 		width: 54%;
 		margin-right: 2%;
 		margin-left: 2%;
+
+		@media screen and (min-width: ($tablet-width - 1)) {
+			margin: 0;
+			width: 33.3333%
+		}
 		
 		&:after {
 			position: absolute;
@@ -41,6 +52,10 @@
 			@include font-size(1.8);
 			margin-top: -9px;
 			color: rgba(0, 0, 0, .3);
+
+			@media screen and (min-width: ($tablet-width - 1)) {
+				display: none;
+			}
 		}
 
 		&--people:after {

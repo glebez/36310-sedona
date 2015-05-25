@@ -7,6 +7,12 @@
 		width: 21%;
 		margin-right: 2%;
 		text-align: center;
+
+		@media screen and (min-width: ($tablet-width - 1)) {
+			width: 9.23%; // 60 / 650 * 100%
+			margin-right: 0.77%; // 5 / 650 * 100%;
+		}
+
 	}
 
 	&__num {
@@ -21,6 +27,22 @@
 	&__details {
 		float: left;
 		width: 77%;
+
+		@media screen and (min-width: ($tablet-width - 1)) {
+			width: 90%;
+		}
+	}
+
+	&__column-3 {
+		@media screen and (min-width: ($tablet-width - 1)) {
+			float: left;
+			width: 32.76%; // 190/580 * 100%
+			margin-right: 0.86%;  // 5/580 * 100%
+
+			&:last-child {
+				margin-right: auto;
+			}
+		}
 	}
 
 	&:first-of-type {

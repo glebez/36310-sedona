@@ -3,12 +3,23 @@
   color: $text-color;
   text-align: center;
   text-transform: uppercase;
+
   &__title {
     margin-bottom: 40px;
-    @include title();
+    @include title;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-bottom: 30px;
+    }
   }
+
   &__text {
     @include font-size(1.4);
     line-height: (26 / 14);
+  }
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    padding-top: 55px;
+    padding-bottom: 50px;
   }
 }

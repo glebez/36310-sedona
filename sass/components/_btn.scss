@@ -20,6 +20,9 @@
   &--short {
     width: (180/230 * 100%);
     margin: 0 auto;
+    @media screen and (min-width: ($tablet-width - 1)) {
+      width: 97.86%;
+    }
   }
 
   &--ghost {

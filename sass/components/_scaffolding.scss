@@ -8,8 +8,16 @@ body {
   background-color: $bg-color;
 }
 
-.benefits-list {
-  padding: 30px 0 20px;
+.important {
+  color: #ff0000;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
 .map {
@@ -18,9 +26,49 @@ body {
   background-image: url('../img/bg-map.jpg');
   background-size: cover;
   background-repeat: no-repeat; 
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    background-image: url('../img/bg-map-sm.jpg');
+  }
 }
 
 .blog-wrapper,
 .post-wrapper {
   margin: 0 20px;
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    margin: 0 45px;
+  }
+}
+
+.form-wrapper {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  @media screen and (min-width: ($tablet-width - 1)) {
+    padding-right: 58px;
+    padding-left: 58px;
+  }
+
+}
+
+
+.visible-xs {
+  @media screen and (min-width: ($tablet-width - 1)) {
+    display: none;
+  }
+}
+
+.visible-sm-inline {
+  display: none;
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    display: inline;
+  }
+}
+
+.hidden-xs {
+  @media screen and (max-width: ($tablet-width - 1)) {
+    display: none;
+  }
 }

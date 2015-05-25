@@ -1,29 +1,63 @@
 .reason {
+  flex: 1 0 256px;
   padding: 40px 20px 50px;
   background-color: $bg-color-contrast;
   color: $text-color-contrast;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    padding: 45px;
+  }
+
+  
   &__content-wrap {
     padding: 33px 20px;
     border-bottom: 1px solid $border-muted;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      border-bottom: none;
+      padding: 45px 25px
+    }
   }
+  
   &__title {
     margin-bottom: 15px;
-    @include title();
+    @include title;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      min-height: 52px;
+      margin-bottom: 9px;
+
+    }
+
   }
   &__num{
     margin-bottom: 25px;
     @include font-size(1.4);
+    line-height: (21 / 14);
     &:before, &:after {
       content: '\2014';
       padding: 0 5px;
+    }
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-bottom: 20px;
     }
   }
   &__text {
     @include font-size(1.4);
     line-height: (21 / 14);
   }
+
+  &__outer {
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      display: flex;
+    }
+
+  }
+
 
   &--dark {
     padding: 0 20px;
@@ -33,9 +67,15 @@
 
   &--arrow-top {
     padding-top: 60px;
-    background-image: url(../img/bg-triangle-edge-2.png);
-    background-position: 50% -20px;
+    background-image: url(../img/bg-triangle-edge-xs-2.png);
+    background-position: 50% -22px;
     background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      padding-top: 45px;
+      background-image: none;
+    }
   }
 
   &:last-child {
@@ -43,5 +83,7 @@
       border: none;
     }
   }
+
+  
 
 }

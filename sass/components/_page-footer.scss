@@ -3,15 +3,39 @@
   text-align: center;
   text-transform: uppercase;
 
+  @media screen and (min-width: ($tablet-width - 1)) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 40px 35px 60px;
+  }
+
+
   &__title {
     margin-bottom: 40px;
     @include title(21, 26);
+    
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-bottom: 0;
+    }
   }
 
   &__testimonial {
     @include font-size(1.4);
     line-height: (26 / 14);
+  }
 
+  &__htmlacademylogo {
+    margin-left: 5px;
+    vertical-align: middle;
+
+    &:hover {
+      fill: $bg-color-contrast;
+    }
+
+    &:active {
+      fill: $icon-color-active;
+    }
   }
   
 }

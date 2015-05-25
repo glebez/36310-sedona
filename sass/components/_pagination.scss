@@ -1,7 +1,36 @@
 .pagination {
-  padding: 45px 20px 30px;
+
+  padding: 45px 5px 30px 20px;
   border-top: 2px solid $border-lightly-muted;
   border-bottom: 2px solid $border-lightly-muted;
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    //max-width: 678px;
+    //margin: 0 auto;
+    padding: 45px 45px 0;
+    border: none;
+  }
+
+  &__label {
+    display: none;
+    @include font-size(2.1);
+    line-height: (26 / 21);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      display: block;
+      float: left;
+      padding: 20px 70px 0 0;
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: ($tablet-width - 1)) {
+      display: inline-block;
+    }
+
+  }
 
   &__btn {
     float: left;
@@ -9,24 +38,25 @@
     height: 56px;
     margin-right: 15px;
     margin-bottom: 15px;
-    padding-top: 17px;
     background-color: $bg-color-contrast;
     color: $text-color-contrast;
     @include title;
     text-align: center;
 
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
-
     &--active {
       background-color: $border-muted;
       color: $text-color;
     }
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-right: 8px;
+    }
+
   }
 
   &__link {
     display: block;
+    padding-top: 17px;
     height: 56px;
     color: inherit;
   }

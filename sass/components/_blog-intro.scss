@@ -2,20 +2,26 @@
   padding: 50px 0 30px;
   text-align: center;
   text-transform: uppercase;
-  border-bottom: 2px solid $border-lightly-muted; 
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    padding: 70px 0 50px;
+  }
+
+  &__content {
+    max-width: 415px;
+    margin: 0 auto;
+
+  }
+
 
 	&__title {
     margin-bottom: 35px;
-	  @include title(30, 26);
+	  @include title(30, 26, 30);
 	}
 
   &__text {
     @include font-size(1.4);
     line-height: (26 / 14);
-  }
-
-  &--borderless {
-    border-bottom: none;
   }
 
 }

@@ -1,12 +1,41 @@
 .photo-breaker {
   width: 100%;
   height: 255px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  &--canyon {
-    background-image: url('../img/bg-canyon.jpg');
+  overflow: hidden;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // &--canyon {
+  //   background-image: url('../img/bg-canyon-xs.jpg');
+
+  //   @media screen and (min-width: ($tablet-width - 1)) {
+  //     background-image: url('../img/bg-canyon-sm.jpg');
+  //     order: -1;
+  //   }
+  // }
+  // &--saloon {
+  //   background-image: url('../img/bg-saloon-xs.jpg');
+
+  //   @media screen and (min-width: ($tablet-width - 1)) {
+  //     background-image: url('../img/bg-saloon-sm.jpg');
+  //   }
+  // }
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    flex: 2 0 512px;
   }
-  &--saloon {
-    background-image: url('../img/bg-saloon.jpg');
+
+  &__img {
+    height: 100%;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      width: 100%;
+      height: auto;
+    }
   }
+
+  &--left-aligned {
+    order: -1;
+  }
+
+
 }

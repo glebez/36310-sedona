@@ -1,51 +1,104 @@
 .jumbo {
   padding: 45px 20px;
   text-align: center;
-  background-image: url('../img/bg-triangle-edge-1.png'), url('../img/bg-jumbo-lg.jpg');
+  background-image: url('../img/intro-triangle.svg'), url('../img/bg-jumbo-xs-full.jpg');
   background-position: 50% 100%, 50% 0;
   background-repeat: no-repeat, no-repeat;
+  background-size: 200%, cover;
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    padding: 75px 50px 85px;
+    background-image: url('../img/intro-triangle.svg'), url('../img/bg-jumbo-sm-full.jpg');
+    background-size: 105%, cover;
+  }
+
+
 
   &__pre-title {
     display: block;
-    height: 66px;
-    margin-bottom: 60px;
-    background-image: url('../img/bg-welcome.png');
+    margin: 0 auto;
+    
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: contain;
     text-indent: -9999px;
+
+    &--welcome {
+      height: 35px;
+      margin-bottom: 10px;
+      background-image: url('../img/text-welcome.svg');
+
+      @media screen and (min-width: ($tablet-width - 1)) {
+        height: 43px;
+        margin-bottom: 12px;
+      }
+
+    }
+
+    &--gorgeous {
+      height: 25px;
+      margin-bottom: 60px;
+      background-image: url('../img/text-tothegorgeous.svg');
+
+      @media screen and (min-width: ($tablet-width - 1)) {
+        height: 30px;
+        margin-bottom: 50px;
+      }
+
+    }
   }
 
   &__title {
     display: block;
     margin-bottom: 70px;
     height: 48px;
-    background-image: url('../img/bg-sedona.png');
-    background-repeat: no-repeat;
+    background-image: url('../img/text-sedona.svg');
+    background-size: contain;
     background-position: center center;
+    background-repeat: no-repeat;
     text-indent: -9999px;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+        height: 75px;
+        margin-bottom: 55px;
+    }
+
 
     &--small {
       height: 30px;
       margin-top: 5px;
       margin-bottom: 35px;
-      background-image: url('../img/bg-sedona-sm.png');
+
+      @media screen and (min-width: ($tablet-width - 1)) {
+        height: 70px;
+        margin-bottom: 25px;
+      }
     }
+
+
   }
 
   &__quote {
     display: block;
     height: 54px;
-    background-image: url('../img/bg-quote.png');
-    background-repeat: no-repeat;
+    background-image: url('../img/text-becausecanyon.svg');
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
     text-indent: -9999px;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+        height: 80px;
+      }
   }
 
   &--folded {
-    background-image: url('../img/bg-triangle-edge-1.png'), url('../img/bg-jumbo-folded.jpg');
+    
     background-position: 50% 100%, 50% 100%;
     background-repeat: no-repeat, no-repeat;
 
   }
+
+  
 
 }

@@ -2,16 +2,21 @@
   width: 138px;
   height: 70px;
   margin: 0 auto;
-  background-image: url(../img/logo.png);
+  text-align: center;
+  background-image: url('../img/form-logo-triangle.svg');
 
   &__wrapper {
-    float: left;
-    width: 228px; // 320 - 60 (menu button & equal margin on the left) -32 (padding)
-    margin: -13px 0 -28px 30px;
+    flex: 1 0 auto;
+    margin-bottom: -15px;
+    margin-left: 43px;
+
+    @media screen and (min-width: ($tablet-width - 1)) {
+      margin-left: 0;
+    }
   }
 
-  &__link {
-    display: block;
-    height: 70px;
+  &__img {
+    width: 67px;
+    height: 56px;
   }
 }
