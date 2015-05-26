@@ -4,11 +4,15 @@
   background-image: url('../img/intro-triangle.svg'), url('../img/photo-background@1x.jpg');
   background-position: 50% 100%, 50% 0;
   background-repeat: no-repeat, no-repeat;
-  background-size: 200%, cover;
+  background-size: 200%, 770px;
 
   @media screen and (min-width: ($tablet-width - 1)) {
     padding: 75px 50px 85px;
     background-size: 105%, cover;
+  }
+
+  @media screen and (min-width: ($desktop-width - 1)) {
+    background-position: 50% 100%, 50% 29%;
   }
 
   @media screen and (min-resolution: 1.5 dppx) {
