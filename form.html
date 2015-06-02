@@ -19,8 +19,8 @@
           
         </div>
         <ul class="main-menu__list">
-          <li class="main-menu__item"><a class="main-menu__link" href="">Карта Штата</a></li>
-          <li class="main-menu__item"><a class="main-menu__link" href="">Информация</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="blog-post.html">Карта Штата</a></li>
+          <li class="main-menu__item"><a class="main-menu__link  main-menu__link--active" href="index.html">Информация</a></li>
           <li class="main-menu__item  main-menu__collapsed">
             <div class="logo__wrapper">
               <div class="logo">
@@ -36,8 +36,8 @@
               <a href="#"><img class="main-menu__i-burger" src="img/icon-menu.svg" alt=""></a>
             </div>
           </li>
-          <li class="main-menu__item"><a class="main-menu__link" href="">Фото и видео</a></li>
-          <li class="main-menu__item"><a class="main-menu__link" href="">Гостиницы</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="blog.html">Фото и видео</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="form.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -52,7 +52,7 @@
         <h2 class="form-header__title">Оставьте свой отзыв</h2>
         <p class="form-header__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </header>
-      <form action="">
+      <form action="" class="feedback-form">
         <div class="form-group">
           <div class="form-group__title-wrapper">
             <h2 class="form-group__title">Представьтесь, пожалуйста:</h2>
@@ -77,9 +77,9 @@
             <h2 class="form-group__title">Ваше общее впечатление:</h2>
           </div>
           <div class="form-group__radio-wrapper">
-            <input class="form-group__radio" type="radio" name="impression" id="imp1" checked>
+            <input class="form-group__radio" type="radio" name="impression" id="imp1" value="good" checked>
             <label class="form-group__label form-group__label--radio" for="imp1">Скорее положительное</label>
-            <input class="form-group__radio" type="radio" name="impression" id="imp2">
+            <input class="form-group__radio" type="radio" name="impression" id="imp2" value="bad">
             <label class="form-group__label form-group__label--radio" for="imp2">Скорее отрицательное</label>
           </div>
         </div>
@@ -122,7 +122,7 @@
               <div class="num-picker">
                 <button class="num-picker__btn">-<i class="icon  icon--minus"></i></button>
                 <div class="num-picker__input-measure num-picker__input-measure--people">
-                  <input class="form-group__input  form-group__input--num-picker" type="text" name="stay-length" id="stay-length" value="2">
+                  <input class="form-group__input  form-group__input--num-picker" type="text" name="travellers-num" id="travellers-num" value="2">
                 </div>
                 
                 <button class="num-picker__btn">+<i class="icon  icon--plus"></i></button>
@@ -157,15 +157,15 @@
             <div class="traveller-info__details">
               <div class="traveller-info__column-3">
                 <label class="form-group__label" for="">Фамилия: <span class="important">*</span></label>
-                <input class="form-group__input" type="text" id="travSurname1" name="trav-surname-1" value="Иванов" required>
+                <input class="form-group__input" type="text" id="travSurname1" name="trav-surname-2" value="Иванов" required>
               </div>
               <div class="traveller-info__column-3">
                 <label class="form-group__label" for="">Имя:<span class="important">*</span></label>
-                <input class="form-group__input" type="text" id="travName1" name="trav-name-1" value="Пётр" required>
+                <input class="form-group__input" type="text" id="travName1" name="trav-name-2" value="Пётр" required>
               </div>
               <div class="traveller-info__column-3">
                 <label class="form-group__label" for="">Отчество:</label>
-                <input class="form-group__input" type="text" id="travMidname1" name="trav-midname-1" value="Александрович">
+                <input class="form-group__input" type="text" id="travMidname1" name="trav-midname-2" value="Александрович">
               </div>
             </div>
           </div>
