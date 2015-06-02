@@ -95,12 +95,12 @@
             <div class="form-group__column-3">
               <label class="form-group__label" for="stay-length"><span class="visible-xs">Длительность</span><span class="visible-sm-inline">Дней</span> пребывания: <span class="important">*</span></label>
               <div class="num-picker">
-                <button class="num-picker__btn">-<i class="icon  icon--minus"></i></button>
+                <button type="button" class="num-picker__btn">-<i class="icon  icon--minus"></i></button>
                 <div class="num-picker__input-measure  num-picker__input-measure--days">
                   <input class="form-group__input  form-group__input--num-picker" type="text" name="stay-length" id="stay-length" value="14">
                 </div>
                 
-                <button class="num-picker__btn">+<i class="icon  icon--plus"></i></button>
+                <button type="button" class="num-picker__btn">+<i class="icon  icon--plus"></i></button>
               </div>
             </div>
             <div class="form-group__column-3">
@@ -113,59 +113,61 @@
           <div class="form-group__title-wrapper">
             <h2 class="form-group__title">Кол-во путешественников:</h2>
           </div>
-          <div class="form-group__row">
+          <div class="form-group__row ">
             <div class="form-group__column-3  form-group__column-3--solo">
               <label class="form-group__label  form-group__label--centered-sm" for="travelers-num">
                 <span class="visible-xs">Количество</span><span class="visible-sm-inline">Кол-во</span> путешественников: <span class="important">*</span>
               </label>
             
-              <div class="num-picker">
-                <button class="num-picker__btn">-<i class="icon  icon--minus"></i></button>
+              <div class="num-picker travellers-picker">
+                <button type="button" class="num-picker__btn">-<i class="icon  icon--minus"></i></button>
                 <div class="num-picker__input-measure num-picker__input-measure--people">
                   <input class="form-group__input  form-group__input--num-picker" type="text" name="travellers-num" id="travellers-num" value="2">
                 </div>
                 
-                <button class="num-picker__btn">+<i class="icon  icon--plus"></i></button>
+                <button type="button" class="num-picker__btn">+<i class="icon  icon--plus"></i></button>
               </div>
             </div>
           </div>
-          <div class="traveller-info">
-            <div class="traveller-info__num-wrapper">
-              <p class="form-group__label form-group__label--centered">&numero;</p>
-              <p class="traveller-info__num">1</p>
+          <div class="travellers">
+            <div class="traveller-info">
+              <div class="traveller-info__num-wrapper">
+                <p class="form-group__label form-group__label--centered">&numero;</p>
+                <p class="traveller-info__num">1</p>
+              </div>
+              <div class="traveller-info__details">
+                <div class="traveller-info__column-3">
+                  <label class="form-group__label" for="">Фамилия: <span class="important">*</span></label>
+                  <input class="form-group__input" type="text" id="travSurname1" name="trav-surname-1" value="Иванов" required>
+                </div>
+                <div class="traveller-info__column-3">
+                  <label class="form-group__label" for="">Имя:<span class="important">*</span></label>
+                  <input class="form-group__input" type="text" id="travName1" name="trav-name-1" value="Пётр" required>
+                </div>
+                <div class="traveller-info__column-3">
+                  <label class="form-group__label" for="">Отчество:</label>
+                  <input class="form-group__input" type="text" id="travMidname1" name="trav-midname-1" value="Александрович">
+                </div>
+              </div>
             </div>
-            <div class="traveller-info__details">
-              <div class="traveller-info__column-3">
-                <label class="form-group__label" for="">Фамилия: <span class="important">*</span></label>
-                <input class="form-group__input" type="text" id="travSurname1" name="trav-surname-1" value="Иванов" required>
+            <div class="traveller-info">
+              <div class="traveller-info__num-wrapper">
+                <p class="form-group__label form-group__label--centered">&numero;</p>
+                <p class="traveller-info__num">2</p>
               </div>
-              <div class="traveller-info__column-3">
-                <label class="form-group__label" for="">Имя:<span class="important">*</span></label>
-                <input class="form-group__input" type="text" id="travName1" name="trav-name-1" value="Пётр" required>
-              </div>
-              <div class="traveller-info__column-3">
-                <label class="form-group__label" for="">Отчество:</label>
-                <input class="form-group__input" type="text" id="travMidname1" name="trav-midname-1" value="Александрович">
-              </div>
-            </div>
-          </div>
-          <div class="traveller-info">
-            <div class="traveller-info__num-wrapper">
-              <p class="form-group__label form-group__label--centered">&numero;</p>
-              <p class="traveller-info__num">2</p>
-            </div>
-            <div class="traveller-info__details">
-              <div class="traveller-info__column-3">
-                <label class="form-group__label" for="">Фамилия: <span class="important">*</span></label>
-                <input class="form-group__input" type="text" id="travSurname1" name="trav-surname-2" value="Иванов" required>
-              </div>
-              <div class="traveller-info__column-3">
-                <label class="form-group__label" for="">Имя:<span class="important">*</span></label>
-                <input class="form-group__input" type="text" id="travName1" name="trav-name-2" value="Пётр" required>
-              </div>
-              <div class="traveller-info__column-3">
-                <label class="form-group__label" for="">Отчество:</label>
-                <input class="form-group__input" type="text" id="travMidname1" name="trav-midname-2" value="Александрович">
+              <div class="traveller-info__details">
+                <div class="traveller-info__column-3">
+                  <label class="form-group__label" for="">Фамилия: <span class="important">*</span></label>
+                  <input class="form-group__input" type="text" id="travSurname1" name="trav-surname-2" value="Иванов" required>
+                </div>
+                <div class="traveller-info__column-3">
+                  <label class="form-group__label" for="">Имя:<span class="important">*</span></label>
+                  <input class="form-group__input" type="text" id="travName1" name="trav-name-2" value="Пётр" required>
+                </div>
+                <div class="traveller-info__column-3">
+                  <label class="form-group__label" for="">Отчество:</label>
+                  <input class="form-group__input" type="text" id="travMidname1" name="trav-midname-2" value="Александрович">
+                </div>
               </div>
             </div>
           </div>
@@ -290,6 +292,7 @@
   </div>
 
   <script src="js/script.js"></script>
+
 
 </body>
 </html>
