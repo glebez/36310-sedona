@@ -7,22 +7,24 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-lintspaces');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-combine-media-queries');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-
-    less: {
-      style: {
-        files: {
-          'css/style.css': 'less/style.less'
-        }
-      }
-    },
 
     sass: {
       style: {
         files: {
           'css/style.css': 'sass/style.scss'
+        }
+      },
+
+      build: {
+        files: {
+          'build/css/style.css': 'sass/style.scss'
         }
       }
     },
@@ -59,6 +61,19 @@ module.exports = function(grunt) {
           ],
           dest: 'gosha',
         }]
+      },
+
+      build: {
+        files: [{
+          expand: true,
+          src: [
+            '*.html',
+            'img/**',
+            'js/**',
+            'fonts/**'
+          ],
+          dest: 'build',
+        }]
       }
     },
 
@@ -66,7 +81,42 @@ module.exports = function(grunt) {
       gosha: [
         'gosha/img/README',
         'gosha/js/README'
-      ]
+      ],
+
+      build: ['build']
+    },
+
+    autoprefixer: { 
+      options: { 
+        browsers: ["last 2 version", "ie 10"] 
+      }, 
+
+      build: { 
+        src: "build/css/style.css" 
+      }
+    },
+
+    cmq: {
+      options: {
+        log: false
+      },
+      build: {
+        files: {
+          'build/css/': ['build/css/*.css']
+        }
+      }
+    },
+
+    imagemin: { 
+      images: { 
+        options: { 
+          optimizationLevel: 3 
+        }, 
+        files: [{ 
+          expand: true, 
+          src: ["build/img/**/*.{png,jpg,gif,svg}"] 
+        }] 
+      } 
     },
 
     watch: {
@@ -83,5 +133,5 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['lintspaces:test']);
 
   grunt.registerTask('default', ['sass:style', 'copy:gosha', 'clean:gosha']);
-  //grunt.registerTask('watch', ['watch:style']);
+  grunt.registerTask('build', ['clean:build', 'copy:build', 'sass:build', 'autoprefixer:build' , 'cmq:build', 'imagemin']);
 };
