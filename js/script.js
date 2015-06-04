@@ -145,6 +145,7 @@ window.onload = (function(){
   })();
 
   (function(){
+    if (!(document.querySelector('.travellers-picker'))) { return;}
     var controll = document.querySelector('.travellers-picker'),
         input = controll.querySelector('input');
 
@@ -181,6 +182,48 @@ window.onload = (function(){
           
 
     }
+
+  })();
+
+  (function(){
+    var map;
+
+    function initialize(){
+
+      var address = new google.maps.LatLng(34.8543784,-111.7951384,13),
+          mapOptions = {
+            center: address,
+            zoom: 7,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            streetViewControl: false,
+            mapTypeControl: false,
+            zoomControl: false,
+            scrollwheel: false,
+            panControl: false
+          };
+
+
+      map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+      var marker = new google.maps.Marker({
+            position: address,
+            map: map,
+            title:"Sedona",
+            icon: 'img/map-marker.svg'
+          });
+
+      
+    }
+
+    initialize();
+
+    google.maps.event.addDomListener(window, "resize", function() {
+     var center = map.getCenter();
+     google.maps.event.trigger(map, "resize");
+     map.setCenter(center); 
+    });
+
 
   })();
 
