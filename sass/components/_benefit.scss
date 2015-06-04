@@ -1,7 +1,7 @@
 .benefit {
   padding: 0 20px;
   text-transform: uppercase;
-  
+
   &__outer {
     padding: 30px 0 20px;
 
@@ -18,7 +18,7 @@
     @include title;
 
   }
-  
+
   &__text {
     @include font-size(1.4);
     line-height: (26 / 14);
@@ -27,6 +27,7 @@
   &__img-wrapper {
     float: left;
     width: 50/280*100%;
+    //width: 17.86%; //50/(320-40)*100%
     min-width: 50px;
     text-align: center;
 
@@ -52,6 +53,7 @@
     padding: 10px 0 15px 10px;
     float: left;
     width: 230/280*100%;
+   //width: 82.14%; //280/(320-40)*100%
     min-width: 230px;
 
     @media screen and (min-width: ($tablet-width - 1)) {
