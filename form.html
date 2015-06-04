@@ -90,11 +90,11 @@
           <div class="form-group__row">
             <div class="form-group__column-3">
               <label class="form-group__label" for="arrival">Дата приезда: <span class="important">*</span></label>
-              <input class="form-group__input" type="text" value="4 июля 2015" name="arrival" id="arrival" required>
+              <input class="form-group__input input-date" type="text" value="04.07.2015" name="arrival" id="arrival" required>
             </div>
             <div class="form-group__column-3">
               <label class="form-group__label" for="stay-length"><span class="visible-xs">Длительность</span><span class="visible-sm-inline">Дней</span> пребывания: <span class="important">*</span></label>
-              <div class="num-picker">
+              <div class="num-picker" id="days-picker">
                 <button type="button" class="num-picker__btn">-<i class="icon  icon--minus"></i></button>
                 <div class="num-picker__input-measure  num-picker__input-measure--days">
                   <input class="form-group__input  form-group__input--num-picker" type="text" name="stay-length" id="stay-length" value="14">
@@ -105,7 +105,7 @@
             </div>
             <div class="form-group__column-3">
               <label class="form-group__label" for="departure">Дата отъезда: <span class="important">*</span></label>
-              <input class="form-group__input  form-group__input--bordered" type="text" value="28 июля 2015" name="departure" id="departure" required>
+              <input class="form-group__input  form-group__input--bordered  input-date" type="text" value="28.07.2015" name="departure" id="departure" required>
             </div>
                     </div>
           </div>
@@ -119,7 +119,7 @@
                 <span class="visible-xs">Количество</span><span class="visible-sm-inline">Кол-во</span> путешественников: <span class="important">*</span>
               </label>
             
-              <div class="num-picker travellers-picker">
+              <div class="num-picker" id="travellers-picker">
                 <button type="button" class="num-picker__btn">-<i class="icon  icon--minus"></i></button>
                 <div class="num-picker__input-measure num-picker__input-measure--people">
                   <input class="form-group__input  form-group__input--num-picker" type="text" name="travellers-num" id="travellers-num" value="2">
@@ -291,7 +291,8 @@
       <button class="btn">Закрыть окно</button>
     </div>
   </div>
-
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/moment/locale/ru.js"></script>
   <script src="js/script.js"></script>
 
 

@@ -213,7 +213,7 @@
 		}
 
 		&--num-picker {
-			margin-bottom: 0;
+			margin-bottom: 0 !important;
 			padding-right: 55px;
 
 			@media screen and (min-width: ($tablet-width - 1)) and (max-width: ($desktop-width - 1)) {

@@ -70,7 +70,8 @@ module.exports = function(grunt) {
             '*.html',
             'img/**',
             'js/**',
-            'fonts/**'
+            'fonts/**',
+            'bower_components/**'
           ],
           dest: 'build',
         }]

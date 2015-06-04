@@ -145,8 +145,8 @@ window.onload = (function(){
   })();
 
   (function(){
-    if (!(document.querySelector('.travellers-picker'))) { return;}
-    var controll = document.querySelector('.travellers-picker'),
+    if (!(document.querySelector('#travellers-picker'))) { return;}
+    var controll = document.querySelector('#travellers-picker'),
         input = controll.querySelector('input');
 
         controll.onclick = function (event) {
@@ -186,7 +186,10 @@ window.onload = (function(){
   })();
 
   (function(){
-    var map;
+    var map,
+        canvas = document.getElementById("map-canvas");
+
+    if(!(canvas)) { return; }
 
     function initialize(){
 
@@ -203,7 +206,7 @@ window.onload = (function(){
           };
 
 
-      map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+      map = new google.maps.Map( canvas, mapOptions);
 
 
       var marker = new google.maps.Marker({
@@ -223,6 +226,60 @@ window.onload = (function(){
      google.maps.event.trigger(map, "resize");
      map.setCenter(center); 
     });
+
+
+  })();
+
+  (function(){
+    //Closure to format date inputs with moment.js
+
+    var dateInputs = document.querySelectorAll('.input-date');
+
+    if (!(dateInputs)) { return;}
+
+    var controll = document.querySelector('#days-picker');
+
+        controll.onclick = function (event) {
+            calcDepartureDate();
+        };
+        controll.onkeyup = function (event) {
+            calcDepartureDate();
+        };
+
+    function dateConvert(input){
+
+      var curVal = input.value;
+      input.value = moment(curVal, ["DD MMMM YY", "DD MM YY", "DD MM YYYY", "DD MMMM YYYY" ]).format("D MMMM YYYY");
+      calcDepartureDate();
+
+    }
+
+    function calcDepartureDate(){
+      var arrival = document.querySelector('#arrival'),
+          stay = document.querySelector('#stay-length'),
+          departure = document.querySelector('#departure');
+
+          departureDate = moment(arrival.value, "D MMMM YYYY").add(stay.value, 'days').format("D MMMM YYYY");
+
+          departure.value = departureDate;
+  
+    }
+
+      for (var i = 0; i < dateInputs.length; i++) {
+        dateConvert(dateInputs[i]);
+        dateInputs[i].addEventListener('blur', function(event){
+          
+          event = event || window.event;
+          dateConvert(event.target);
+
+        });
+
+    }
+
+    
+    
+
+    
 
 
   })();
