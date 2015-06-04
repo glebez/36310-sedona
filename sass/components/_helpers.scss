@@ -1,0 +1,44 @@
+.important {
+  color: #ff0000;
+}
+
+.visible-xs {
+  @media screen and (min-width: ($tablet-width - 1)) {
+    display: none;
+  }
+}
+
+.visible-md {
+  display: none;
+  @media screen and (min-width: ($desktop-width - 1)) {
+    display: block;
+  }
+}
+
+.visible-sm-inline {
+  display: none;
+
+  @media screen and (min-width: ($tablet-width - 1)) {
+    display: inline;
+  }
+}
+
+.hidden-xs {
+  @media screen and (max-width: ($tablet-width - 1)) {
+    display: none;
+  }
+}
+
+.hidden-md {
+  @media screen and (min-width: ($desktop-width - 1)) {
+    display: none;
+  }
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

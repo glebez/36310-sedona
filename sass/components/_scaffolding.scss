@@ -21,50 +21,12 @@ body {
   background-color: $bg-color-lightly-muted;
 }
 
-.important {
-  color: #ff0000;
-}
-
-.visible-xs {
-  @media screen and (min-width: ($tablet-width - 1)) {
-    display: none;
-  }
-}
-
-.visible-md {
-  display: none !important;
-  @media screen and (min-width: ($desktop-width - 1)) {
-    display: initial;
-  }
-}
-
-.visible-sm-inline {
+input[type="file"],
+input[type="radio"]
+input[type="checkbox"] {
   display: none;
-
-  @media screen and (min-width: ($tablet-width - 1)) {
-    display: inline;
-  }
 }
 
-.hidden-xs {
-  @media screen and (max-width: ($tablet-width - 1)) {
-    display: none;
-  }
-}
-
-.hidden-md {
-  @media screen and (min-width: ($desktop-width - 1)) {
-    display: none;
-  }
-}
-
-.clearfix {
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
 
 .map {
   width: 100%;
