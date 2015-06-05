@@ -10,6 +10,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-replace');
 
 
   grunt.initConfig({
@@ -120,6 +122,35 @@ module.exports = function(grunt) {
       } 
     },
 
+    cssmin: { 
+      build: { 
+        options: { 
+          keepSpecialComments: 0, 
+          report: "gzip" 
+        }, 
+
+        files: { 
+          "build/css/style.min.css": ["build/css/style.css"] 
+        } 
+      } 
+    },
+
+    replace: {
+      build: { 
+        options: { 
+          patterns: [{ 
+            match: /[\"\']css\/([^\"\']+).css[\"\']/g, 
+            replacement: '"css/$1.min.css"'
+          }] 
+        },
+
+        files: [{ 
+          expand: true, 
+          src: ["build/*.html" ] 
+        }]
+      }
+    },
+
     watch: {
       style: {
           files: ['sass/*.scss', 'sass/**/*.scss'],
@@ -134,5 +165,5 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['lintspaces:test']);
 
   grunt.registerTask('default', ['sass:style', 'copy:gosha', 'clean:gosha']);
-  grunt.registerTask('build', ['clean:build', 'copy:build', 'sass:build', 'autoprefixer:build' , 'cmq:build', 'imagemin']);
+  grunt.registerTask('build', ['clean:build', 'copy:build', 'sass:build', 'autoprefixer:build' , 'cmq:build', 'cssmin:build' , 'imagemin', 'replace:build']);
 };
