@@ -13,3 +13,20 @@
     line-height: ($line-height-sm / $font-size-sm);
   }
 }
+
+@mixin gridder($columns: 12, $gutter: 30) {
+  @for $i from 1 through $columns {
+    
+    .col-#{$i}-#{$columns} {
+      float: left;
+      width: $i / $columns * 100%;
+      padding-right: $gutter/2 * 1px;
+      padding-left: $gutter/2 * 1px;
+    }
+  }
+
+  .row {
+    margin-right: $gutter/2 * -1px;
+    margin-left: $gutter/2 * -1px;
+  }
+}

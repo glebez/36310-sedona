@@ -21,24 +21,29 @@
 	&__thumbnail {
 		position: relative;
 		float: left;
+		width: 70px;
 		margin-top: 35px;
 		margin-right: 35px;
 
 		@media screen and (min-width: ($tablet-width - 1)) {
 			margin-right: 65px;
+			width: 140px;
 		}
 	}
 
 	&__img-wrap {
-		width: 70px;
+		height: 70px;
+		overflow: hidden;
 		font-size: 0;
 
 		@media screen and (min-width: ($tablet-width - 1)) {
-			width: 140px;
+			height: 140px;
 		}
 
 		img {
 			width: 100%;
+			margin-top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 
@@ -55,6 +60,7 @@
 
 	&__closer {
 		position: absolute;
+		z-index: 5;
 		top: 0;
 		left: 50%;
 		width: 30px;
